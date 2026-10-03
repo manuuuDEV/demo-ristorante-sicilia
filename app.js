@@ -505,7 +505,7 @@ const menuData = [
     priceStr: "€ 6.00",
     badge: { it: "Artigianale Locale", en: "Local Craft" },
     allergens: { it: "Glutine, Alcol 5.2% Vol.", en: "Gluten, Alcohol 5.2% Vol." },
-    image: "https://images.unsplash.com/photo-1608270190807-6c07aa4c4ff0?auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1535958636474-b021ee887b13?auto=format&fit=crop&w=800&q=80"
   },
 
   // --- DESSERT ARTIGIANALI ---
@@ -648,7 +648,7 @@ function renderMenu() {
 
     card.innerHTML = `
       <div class="dish-media" onclick="openLightbox(${dish.id})">
-        <img src="${dish.image}" alt="${dish.title[currentLang]}" class="dish-img" loading="lazy">
+        <img src="${dish.image}" alt="${dish.title[currentLang]}" class="dish-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80';">
         <span class="dish-badge-pill">${dish.badge[currentLang]}</span>
         <span class="dish-price-tag">${dish.priceStr}</span>
         <div class="dish-zoom-hint" title="Ingrandisci foto">
@@ -898,6 +898,10 @@ window.openLightbox = function(dishId) {
 
   currentLightboxDishId = dishId;
   lightboxImg.src = dish.image;
+  lightboxImg.onerror = function() {
+    this.onerror = null;
+    this.src = 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80';
+  };
   lightboxBadge.textContent = dish.badge[currentLang];
   lightboxTitle.textContent = dish.title[currentLang];
   lightboxDesc.textContent = dish.desc[currentLang];
