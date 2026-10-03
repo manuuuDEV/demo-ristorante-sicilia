@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza & Lounge Bar | Demo Menu Digitale</title>
+  <meta name="description" content="Menu digitale e sito vetrina ad alte prestazioni per la ristorazione e pizzeria a Giardini Naxos. Cucina tipica, forno a legna e cocktail.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <header class="top-bar">
+    <div class="container top-bar-content">
+      <span>📍 Giardini Naxos • Taormina • Pizza Napoletana & Lounge Bar</span>
+      <div class="lang-switch">
+        <button class="lang-btn active" id="lang-it">IT</button>
+        <span class="sep">|</span>
+        <button class="lang-btn" id="lang-en">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-content">
+      <a href="#" class="brand-logo">
+        <span class="logo-script">Pizzeria & Lounge Bar</span>
+        <span class="logo-main">PREVIEW DEMO</span>
+      </a>
+
+      <div class="nav-actions">
+        <button class="btn btn-outline" id="qr-modal-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          <span>QR Tavolo</span>
+        </button>
+        <a href="#prenota" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>Prenota Tavolo</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="container hero-content">
+      <div class="badge-tag">Giardini Naxos • Taormina</div>
+      <h1 class="hero-title">L'Arte della Pizza e dei Cocktail d'Autore.</h1>
+      <p class="hero-subtitle">
+        Impasti a lenta lievitazione, ingredienti di prima scelta, cocktail signature e accoglienza esclusiva.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#menu" class="btn btn-lg btn-primary">Esplora il Menu Digitale</a>
+        <a href="#prenota" class="btn btn-lg btn-glass">
+          <span>Prenota su WhatsApp</span>
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-num">4.6 ★</div>
+          <div class="stat-label">Oltre 500 recensioni Google</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Ingredienti Selezionati</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">48h</div>
+          <div class="stat-label">Lievitazione Naturale</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Menu Section -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="sub-heading">Esperienza Gastronomica</span>
+        <h2 class="section-title">Menu Interattivo da Smartphone</h2>
+        <p class="section-desc">Consultabile all'istante dal tuo smartphone con filtri rapidi, allergeni e ricerca istantanea.</p>
+      </div>
+
+      <!-- Search & Filters -->
+      <div class="menu-controls">
+        <div class="search-box">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="menu-search" placeholder="Cerca una pizza o portata (es. 'Margherita', 'Pistacchio', 'Bufala')...">
+        </div>
+
+        <div class="category-pills" id="category-pills">
+          <button class="pill-btn active" data-category="all">Tutte le Proposte</button>
+          <button class="pill-btn" data-category="antipasti">Stuzzicherie & Fritti</button>
+          <button class="pill-btn" data-category="pizze">Pizze Gourmet & Tradizionali</button>
+          <button class="pill-btn" data-category="primi">Primi & Cucina</button>
+          <button class="pill-btn" data-category="secondi">Secondi</button>
+          <button class="pill-btn" data-category="dolci">Dessert</button>
+        </div>
+      </div>
+
+      <!-- Menu Grid -->
+      <div class="menu-grid" id="menu-grid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Table QR Section -->
+  <section class="qr-promo-section">
+    <div class="container qr-promo-card">
+      <div class="qr-promo-text">
+        <span class="badge-tag">Innovazione per i Tuoi Clienti</span>
+        <h2>Menu al Tavolo Istantaneo con QR Code</h2>
+        <p>
+          I clienti inquadrano il QR code sul tavolo: visualizzano subito foto in alta definizione, descrizioni bilingue e allergeni senza dover scaricare app o registrarsi.
+        </p>
+        <ul class="benefit-list">
+          <li>⚡ <strong>Caricamento in 0.4 secondi</strong> anche con connessione mobile debole</li>
+          <li>🇮🇹 🇬🇧 <strong>Bilingue automatico</strong> (Italiano e Inglese per turisti)</li>
+          <li>💰 <strong>Piattaforma proprietaria</strong> senza canoni esterni di terze parti</li>
+        </ul>
+      </div>
+      <div class="qr-promo-visual">
+        <div class="qr-card-mockup">
+          <div class="qr-box">
+            <svg class="qr-svg" viewBox="0 0 100 100" fill="currentColor">
+              <path d="M10 10h30v30h-30z M15 15h20v20h-20z M20 20h10v10h-10z M60 10h30v30h-30z M65 15h20v20h-20z M70 20h10v10h-10z M10 60h30v30h-30z M15 65h20v20h-20z M20 70h10v10h-10z M45 15h10v10h-10z M45 35h10v10h-10z M15 45h10v10h-10z M35 45h10v10h-10z M55 45h10v10h-10z M75 45h10v10h-10z M45 55h10v10h-10z M65 55h10v10h-10z M85 55h10v10h-10z M45 75h10v10h-10z M65 75h10v10h-10z M85 75h10v10h-10z M55 85h20v10h-20z"/>
+            </svg>
+          </div>
+          <span class="qr-mockup-label">Inquadra per il Menu</span>
+          <span class="qr-mockup-sub">Tavolo • Accesso Rapido</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Direct WhatsApp Reservation Section -->
+  <section class="reservation-section" id="prenota">
+    <div class="container reservation-container">
+      <div class="reservation-info">
+        <span class="sub-heading">Prenotazione Diretta</span>
+        <h2>Riserva il Tuo Tavolo</h2>
+        <p>Prenota in 30 secondi senza intermediari o commissioni. La richiesta arriva istantaneamente su WhatsApp.</p>
+
+        <div class="info-items">
+          <div class="info-item">
+            <span class="info-icon">📍</span>
+            <div>
+              <strong>Dove siamo</strong>
+              <p>Giardini Naxos (ME)</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">⏰</span>
+            <div>
+              <strong>Orari di Apertura</strong>
+              <p>Aperto tutti i giorni dalle 17:30 alle 23:00</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">📞</span>
+            <div>
+              <strong>Prenotazioni WhatsApp</strong>
+              <p>Conferma rapida al tavolo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reservation-form-card">
+        <h3>Modulo Rapido di Prenotazione</h3>
+        <form id="reservation-form">
+          <div class="form-group">
+            <label for="res-name">Nome e Cognome *</label>
+            <input type="text" id="res-name" required placeholder="Es. Mario Rossi">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-date">Data *</label>
+              <input type="date" id="res-date" required>
+            </div>
+            <div class="form-group">
+              <label for="res-time">Orario *</label>
+              <select id="res-time" required>
+                <option value="19:30">19:30</option>
+                <option value="20:00" selected>20:00</option>
+                <option value="20:30">20:30</option>
+                <option value="21:00">21:00</option>
+                <option value="21:30">21:30</option>
+                <option value="22:00">22:00</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-guests">Persone *</label>
+              <select id="res-guests" required>
+                <option value="1">1 Persona</option>
+                <option value="2" selected>2 Persone</option>
+                <option value="3">3 Persone</option>
+                <option value="4">4 Persone</option>
+                <option value="5">5 Persone</option>
+                <option value="6+">6 o più persone</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="res-phone">Recapito Telefonico *</label>
+              <input type="tel" id="res-phone" required placeholder="Es. 333 1234567">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="res-notes">Note speciali (intolleranze, celiachia, seggiolone)</label>
+            <input type="text" id="res-notes" placeholder="Es. 1 celiaco, tavolo all'aperto">
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg">
+            <span>Invia Richiesta via WhatsApp</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal for QR Preview -->
+  <div class="modal-overlay" id="qr-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <h3>Scansiona il Menu Digitale</h3>
+      <p>Simulazione dell'esperienza cliente al tavolo.</p>
+      <div class="modal-qr-container">
+        <svg class="qr-svg-lg" viewBox="0 0 100 100" fill="currentColor">
+          <path d="M10 10h30v30h-30z M15 15h20v20h-20z M20 20h10v10h-10z M60 10h30v30h-30z M65 15h20v20h-20z M70 20h10v10h-10z M10 60h30v30h-30z M15 65h20v20h-20z M20 70h10v10h-10z M45 15h10v10h-10z M45 35h10v10h-10z M15 45h10v10h-10z M35 45h10v10h-10z M55 45h10v10h-10z M75 45h10v10h-10z M45 55h10v10h-10z M65 55h10v10h-10z M85 55h10v10h-10z M45 75h10v10h-10z M65 75h10v10h-10z M85 75h10v10h-10z M55 85h20v10h-20z"/>
+        </svg>
+      </div>
+      <p class="small-text">Menu interattivo ad alta velocità ottimizzato per smartphone</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-col">
+        <div class="brand-logo">
+          <span class="logo-script">Pizza & Gourmet</span>
+          <span class="logo-main">LOUNGE EXPERIENCE</span>
+        </div>
+        <p class="footer-bio">Piattaforma digitale ad alte prestazioni per la ristorazione e pizza napoletana a Giardini Naxos e Taormina.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Caratteristiche del Menu</h4>
+        <ul>
+          <li>✓ Consultazione istantanea senza attese</li>
+          <li>✓ Grafica 100% responsive per ogni smartphone</li>
+          <li>✓ Modulo prenotazione diretta WhatsApp</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Filosofia & Accoglienza</h4>
+        <p>Impasti a lenta lievitazione, ingredienti d'eccellenza e servizio al tavolo d'avanguardia.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Demo Interattiva • Piattaforma Web & Menu Digitale</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
