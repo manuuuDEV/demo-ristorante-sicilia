@@ -7,149 +7,387 @@
 const KALO_WHATSAPP = "393392185191";
 
 const menuData = [
-  // --- PIZZE GOURMET ---
+  // --- PIZZE GOURMET KALÒ ---
   {
     id: 1,
     category: "pizze-gourmet",
     title: {
-      it: "Oro di Naxos (Pistacchio & Burrata)",
-      en: "Naxos Gold (Pistachio & Burrata)"
+      it: "Kalò (La Signature)",
+      en: "Kalò (The Signature)"
     },
     desc: {
-      it: "Fior di latte campano fresco, fette di Mortadella Bologna I.G.P., generosa stracciatella di bufala, pesto puro di pistacchio di Bronte e granella tostata.",
-      en: "Fresh Campania fior di latte, Bologna I.G.P. mortadella slices, generous buffalo stracciatella, pure Bronte pistachio pesto and toasted nuts."
+      it: "Crema di funghi al tartufo, Fior di Latte, Funghi Porcini, Asparagi, Olio EVO e Basilico. L'incontro perfetto tra l'intensità del sottobosco e l'eleganza. Il sapore profondo del tartufo si bilancia con la delicatezza dei porcini e la nota leggermente amarognola degli asparagi. Per veri intenditori.",
+      en: "Truffle mushroom cream, Fior di Latte mozzarella, Porcini mushrooms, Asparagus, EVOO and fresh basil. A harmonious balance of earthy richness and gourmet elegance."
     },
-    priceVal: 14.50,
-    priceStr: "€ 14.50",
+    priceVal: 13.00,
+    priceStr: "€ 13.00",
     badge: { it: "Signature Kalò", en: "Kalò Signature" },
-    allergens: { it: "Glutine, Lattosio, Frutta a guscio", en: "Gluten, Dairy, Tree Nuts" },
-    image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80"
+    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
+    image: "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 2,
     category: "pizze-gourmet",
     title: {
-      it: "Etna Fumante (Tartufo & Porcini)",
-      en: "Smoky Etna (Truffle & Porcini)"
+      it: "Mortazza (Pistacchio & Burrata)",
+      en: "Mortazza (Pistachio & Burrata)"
     },
     desc: {
-      it: "Crema vellutata di porcini freschi dell'Etna, fior di latte, salsiccia a punta di coltello, perle di tartufo nero estivo e fonduta di caciocavallo ragusano DOP.",
-      en: "Silky Mount Etna porcini cream, fior di latte, artisan knife-cut sausage, black summer truffle pearls and melted Ragusano DOP caciocavallo."
+      it: "Mozzarella, Pesto di Pistacchio, Mascarpone, Burrata, Mortadella (con pistacchio), Farina di Pistacchio, Olio EVO e Basilico. Un inno alla Sicilia e all'Emilia in un morso indimenticabile: la sapidità della mortadella incontra la dolcezza del pistacchio, con la morbidezza vellutata della burrata.",
+      en: "Mozzarella, Bronte pistachio pesto, mascarpone, whole creamy burrata, artisanal mortadella, pistachio flour and EVOO. A luscious hymn uniting Sicily and Emilia."
     },
-    priceVal: 15.00,
-    priceStr: "€ 15.00",
-    badge: { it: "Specialità Gourmet", en: "Gourmet Specialty" },
-    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
-    image: "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=800&q=80"
+    priceVal: 12.00,
+    priceStr: "€ 12.00",
+    badge: { it: "Top Gourmet", en: "Top Gourmet" },
+    allergens: { it: "Glutine, Lattosio, Frutta a guscio", en: "Gluten, Dairy, Tree Nuts" },
+    image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 3,
     category: "pizze-gourmet",
     title: {
-      it: "Regina di Sicilia (Tonno & Cipolla Caramellata)",
-      en: "Queen of Sicily (Tuna & Caramelized Onion)"
+      it: "Burrata & Crudo di Parma",
+      en: "Burrata & Parma Prosciutto"
     },
     desc: {
-      it: "Filetti di tonno rosso del Mediterraneo, cipolla rossa caramellata di Tropea, datterino giallo campano, capperi di Salina e origano selvatico di montagna.",
-      en: "Mediterranean red tuna fillets, sweet Tropea caramelized red onion, yellow date tomatoes, Salina capers and wild mountain oregano."
+      it: "Pomodoro San Marzano D.O.P., Burrata Pugliese, Prosciutto Crudo di Parma, Olio EVO e Basilico. Base San Marzano cotta alla perfezione su cui viene adagiata a freddo una generosa Burrata Pugliese dal cuore cremoso e setoso, con fette sottili di Crudo di Parma DOP. Freschezza e qualità assolute.",
+      en: "San Marzano D.O.P. tomato sauce, fresh creamy Pugliese burrata, thin Parma DOP cured prosciutto and fragrant basil. Absolute quality and freshness."
     },
-    priceVal: 14.00,
-    priceStr: "€ 14.00",
-    badge: { it: "Pescato Locale", en: "Local Catch" },
-    allergens: { it: "Glutine, Pesce", en: "Gluten, Fish" },
-    image: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=800&q=80"
+    priceVal: 12.00,
+    priceStr: "€ 12.00",
+    badge: { it: "Burrata Pugliese", en: "Creamy Burrata" },
+    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
+    image: "https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 4,
     category: "pizze-gourmet",
     title: {
-      it: "La Taormina Spianata & 'Nduja",
-      en: "Taormina Spianata & 'Nduja"
+      it: "Bufala E Pepe (L'Equilibrio Perfetto)",
+      en: "Bufala & Pepper (Perfect Balance)"
     },
     desc: {
-      it: "Base fiordilatte con 'nduja di Spilinga sciolta in cottura, spianata piccante calabra, bocconcini di mozzarella di bufala a crudo e gocce di miele all'arancia.",
-      en: "Fior di latte base with fiery Spilinga 'nduja, spicy Calabrian spianata salami, fresh cold buffalo mozzarella and orange blossom honey drops."
+      it: "Sinfonia di freschezza e croccantezza: su base rossa leggermente cotta, Mozzarella di Bufala Campana DOP, Guanciale Croccante, Datterini di Pachino Confit, Pepe Nero macinato fresco e Basilico. Un'esperienza cremosa, sapida e profumatissima.",
+      en: "Light tomato base, Buffalo Mozzarella Campana DOP, crispy pork cheek guanciale, Pachino date tomato confit and black pepper. Rich, savory and intensely aromatic."
     },
-    priceVal: 13.50,
-    priceStr: "€ 13.50",
-    badge: { it: "Gusto Intenso", en: "Bold & Spicy" },
+    priceVal: 12.00,
+    priceStr: "€ 12.00",
+    badge: { it: "Guanciale Croccante", en: "Crispy Guanciale" },
     allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
-    image: "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?auto=format&fit=crop&w=800&q=80"
   },
-
-  // --- PIZZE CLASSICHE ---
   {
     id: 5,
-    category: "pizze-classiche",
+    category: "pizze-gourmet",
     title: {
-      it: "Margherita Verace Napoletana D.O.P.",
-      en: "Authentic Neapolitan Margherita D.O.P."
+      it: "Brontese (Speck & Pistacchio)",
+      en: "Brontese (Speck & Pistachio)"
     },
     desc: {
-      it: "Pomodoro San Marzano dell'Agro Sarnese D.O.P., mozzarella di bufala campana fresca, foglie di basilico genovese ed olio extravergine d'oliva siciliano.",
-      en: "San Marzano D.O.P. tomato sauce, fresh buffalo mozzarella from Campania, aromatic basil leaves and Sicilian extra virgin olive oil."
+      it: "Fior di Latte, Speck Alto Adige, Pesto di Pistacchio, Granella di Pistacchio, Olio EVO e Basilico. L'affumicatura delicata dello Speck incontra l'intensità aromatica del pistacchio. Un piatto bilanciato dove la sapidità è stemperata dalla dolcezza del frutto secco.",
+      en: "Fior di Latte, Alto Adige smoked speck, pistachio pesto, toasted crushed pistachios and EVOO. A harmonious combination of Alpine smokiness and Sicilian sweetness."
     },
-    priceVal: 9.50,
-    priceStr: "€ 9.50",
-    badge: { it: "Lievitazione 48h", en: "48h Proofed" },
-    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
-    image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80"
+    priceVal: 10.00,
+    priceStr: "€ 10.00",
+    badge: { it: "Pistacchio di Bronte", en: "Bronte Pistachio" },
+    allergens: { it: "Glutine, Lattosio, Frutta a guscio", en: "Gluten, Dairy, Tree Nuts" },
+    image: "https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 6,
-    category: "pizze-classiche",
+    category: "pizze-gourmet",
     title: {
-      it: "Marinara ai Quattro Pomodori",
-      en: "Four-Tomato Marinara"
+      it: "Nerano (Omaggio alla Costiera)",
+      en: "Nerano (Amalfi Coast Tribute)"
     },
     desc: {
-      it: "Pomodoro San Marzano, datterino rosso dolce, datterino giallo del Vesuvio, fettine d'aglio rosso di Nubia, origano selvatico e olio EVO.",
-      en: "San Marzano sauce, sweet red & yellow Vesuvian date tomatoes, Nubia red garlic slivers, fragrant wild oregano and premium EVOO."
+      it: "Crema di Zucchine, Fior di Latte, Chips di Zucchina fresca, Provolone del Monaco D.O.P., Olio EVO e Basilico. L'eleganza della Costiera Amalfitana in un morso: la base vellutata accoglie la sapidità piccantina del Provolone del Monaco e la croccantezza irresistibile delle chips.",
+      en: "Velvety zucchini cream, fior di latte, crispy zucchini chips, Provolone del Monaco D.O.P., EVOO and basil. Pure Mediterranean elegance with a crisp bite."
     },
-    priceVal: 8.00,
-    priceStr: "€ 8.00",
-    badge: { it: "100% Vegetale", en: "Plant-Based" },
+    priceVal: 10.00,
+    priceStr: "€ 10.00",
+    badge: { it: "Provolone del Monaco", en: "Provolone D.O.P." },
+    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
+    image: "https://images.unsplash.com/photo-1585238342024-78d387f4a707?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 7,
+    category: "pizze-gourmet",
+    title: {
+      it: "Scarola E Alici",
+      en: "Escarole & Anchovies"
+    },
+    desc: {
+      it: "Il sapore autentico del Mediterraneo. Base bianca con Scarola saltata a regola d'arte che avvolge le prelibate Alici, Provola di Bufala di Paestum cremosa, pomodorini confit dolci e origano profumato.",
+      en: "White base with skillfully sautéed escarole, Mediterranean anchovies, Paestum smoked buffalo provola, sweet tomato confit and wild oregano."
+    },
+    priceVal: 12.00,
+    priceStr: "€ 12.00",
+    badge: { it: "Sapore di Mare", en: "Mediterranean" },
+    allergens: { it: "Glutine, Lattosio, Pesce", en: "Gluten, Dairy, Fish" },
+    image: "https://images.unsplash.com/photo-1511688878353-3a2f5be94cd7?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 8,
+    category: "pizze-gourmet",
+    title: {
+      it: "Porchetta & Patate al Forno",
+      en: "Porchetta & Roast Potatoes"
+    },
+    desc: {
+      it: "Porchetta croccante, patate al forno e Provola filante. Il comfort food per eccellenza, impreziosito dal tocco aromatico della maionese al rosmarino fresco. Irresistibile.",
+      en: "Crispy roast porchetta, tender roasted potatoes, melted smoked provola and fresh rosemary-infused mayo. The ultimate Italian comfort food."
+    },
+    priceVal: 13.00,
+    priceStr: "€ 13.00",
+    badge: { it: "Comfort Food", en: "Comfort Food" },
+    allergens: { it: "Glutine, Lattosio, Uova", en: "Gluten, Dairy, Eggs" },
+    image: "https://images.unsplash.com/photo-1544982503-9f984c14501a?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 9,
+    category: "pizze-gourmet",
+    title: {
+      it: "Luna Rossa (Salsiccia & Finocchietto)",
+      en: "Luna Rossa (Sausage & Wild Fennel)"
+    },
+    desc: {
+      it: "La tradizione incontra l'aroma: Mozzarella fior di latte, Salsiccia e Patate al Forno, reso unico dall'aggiunta della nostra Purea artigianale di Finocchietto selvatico. Ricca, saporita e incredibilmente profumata.",
+      en: "Fior di latte mozzarella, savory Italian sausage and roasted potatoes, crowned with our house-made wild fennel puree. Distinctive and fragrant."
+    },
+    priceVal: 12.00,
+    priceStr: "€ 12.00",
+    badge: { it: "Purea Finocchietto", en: "Wild Fennel Puree" },
+    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
+    image: "https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 10,
+    category: "pizze-gourmet",
+    title: {
+      it: "Sapori D'Autunno (Zucca & Porcini)",
+      en: "Autumn Flavors (Pumpkin & Porcini)"
+    },
+    desc: {
+      it: "Crema di zucca artigianale, Speck Alto Adige, Funghi Porcini trifolati e Provola Affumicata. La pizza che profuma di camino e bosco: calda, ricca e irresistibile.",
+      en: "Artisanal pumpkin cream, Alto Adige smoked speck, sautéed porcini mushrooms and melted smoked provola. Warm, comforting forest flavors."
+    },
+    priceVal: 13.00,
+    priceStr: "€ 13.00",
+    badge: { it: "Zucca & Porcini", en: "Pumpkin & Porcini" },
+    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
+    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80"
+  },
+
+  // --- PIZZE CLASSICHE & TRADIZIONALI KALÒ ---
+  {
+    id: 11,
+    category: "pizze-classiche",
+    title: {
+      it: "Margherita",
+      en: "Margherita"
+    },
+    desc: {
+      it: "La nostra interpretazione della regina: pomodoro San Marzano DOP, Mozzarella Fior di Latte, basilico fresco e Olio EVO. Sapore ineguagliabile e ingredienti di prima scelta.",
+      en: "Our interpretation of the queen: San Marzano DOP tomato sauce, Fior di Latte mozzarella, fresh basil and extra virgin olive oil. Pure classic flavor."
+    },
+    priceVal: 7.00,
+    priceStr: "€ 7.00",
+    badge: { it: "San Marzano DOP", en: "Classic DOP" },
+    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
+    image: "https://images.unsplash.com/photo-1604382355076-af4b0eb60143?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 12,
+    category: "pizze-classiche",
+    title: {
+      it: "Verace Napoletana D.O.P.",
+      en: "Verace Napoletana D.O.P."
+    },
+    desc: {
+      it: "La vera essenza della tradizione: impasto a lunghissima maturazione, Pomodoro San Marzano D.O.P., Mozzarella di Bufala Campana D.O.P., Basilico fresco e Olio EVO. La pizza riconosciuta a livello mondiale.",
+      en: "The true essence of Neapolitan heritage: long-aged dough, San Marzano D.O.P. tomatoes, fresh Buffalo Mozzarella Campana D.O.P., basil and EVOO."
+    },
+    priceVal: 9.00,
+    priceStr: "€ 9.00",
+    badge: { it: "Bufala Campana DOP", en: "Buffalo DOP" },
+    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
+    image: "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 13,
+    category: "pizze-classiche",
+    title: {
+      it: "Marinara",
+      en: "Marinara"
+    },
+    desc: {
+      it: "La vera essenza della pizza, senza mozzarella. Pomodoro fresco, Aglio, Origano a richiesta e abbondante Olio EVO. Sapore intenso e altissima digeribilità. (Ideale anche per chi è intollerante al lattosio!)",
+      en: "The pure essence of pizza, cheese-free. Fresh tomato sauce, sweet garlic, wild oregano and abundant EVOO. Highly digestible and naturally lactose-free."
+    },
+    priceVal: 6.00,
+    priceStr: "€ 6.00",
+    badge: { it: "Senza Lattosio", en: "Lactose-Free" },
     allergens: { it: "Glutine", en: "Gluten" },
     image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80"
   },
   {
-    id: 7,
+    id: 14,
     category: "pizze-classiche",
     title: {
-      it: "Diavola Artigianale",
-      en: "Artisanal Spicy Diavola"
+      it: "Provola E Pepe",
+      en: "Smoked Provola & Black Pepper"
     },
     desc: {
-      it: "Pomodoro San Marzano D.O.P., fior di latte campano, salame piccante a grana fine stagionato a regola d'arte e peperoncino calabrese fresco.",
-      en: "San Marzano D.O.P. tomato, fior di latte mozzarella, artisanal spicy dry-cured salami and fresh chili flakes."
+      it: "Pomodoro San Marzano, bufala affumicata di Paestum, pepe nero, basilico, olio EVO. L'affumicatura naturale della provola, sciolta perfettamente, crea una tela ricca e saporita con una nota decisa e persistente.",
+      en: "San Marzano tomatoes, naturally smoked Paestum buffalo mozzarella, freshly ground black pepper, basil and EVOO. Bold, smoky and deeply savory."
     },
-    priceVal: 10.50,
-    priceStr: "€ 10.50",
-    badge: { it: "Tradizionale", en: "Traditional" },
+    priceVal: 12.00,
+    priceStr: "€ 12.00",
+    badge: { it: "Bufala di Paestum", en: "Smoked Paestum" },
+    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
+    image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 15,
+    category: "pizze-classiche",
+    title: {
+      it: "Norma Siciliana",
+      en: "Sicilian Norma"
+    },
+    desc: {
+      it: "La nostra pizza ispirata al celebre piatto siciliano: base con pomodoro e mozzarella, arricchita dopo cottura con cubetti di melanzane fritte croccanti, Ricotta al forno o Ricotta Salata grattugiata e Basilico fresco. Sapore pieno e indimenticabile.",
+      en: "Homage to the iconic Sicilian classic: tomato and mozzarella base, topped with crispy fried eggplant cubes, baked salted ricotta and aromatic basil."
+    },
+    priceVal: 9.00,
+    priceStr: "€ 9.00",
+    badge: { it: "Icona Siciliana", en: "Sicilian Icon" },
+    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
+    image: "https://images.unsplash.com/photo-1590947132387-155cc02f3212?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 16,
+    category: "pizze-classiche",
+    title: {
+      it: "Caprese Fresca",
+      en: "Fresh Caprese"
+    },
+    desc: {
+      it: "La pizza estiva per eccellenza: mozzarella di bufala campana, pomodorini rossi e datterini gialli dolci, basilico fresco e Olio EVO a crudo.",
+      en: "The quintessential summer pizza: fresh buffalo mozzarella, vibrant red and yellow cherry tomatoes, fresh basil and extra virgin olive oil."
+    },
+    priceVal: 9.00,
+    priceStr: "€ 9.00",
+    badge: { it: "Fresca & Leggera", en: "Fresh & Crisp" },
+    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
+    image: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 17,
+    category: "pizze-classiche",
+    title: {
+      it: "Diavola (Ventricina Abruzzese)",
+      en: "Diavola (Spicy Ventricina)"
+    },
+    desc: {
+      it: "Non chiamatela solo Diavola. Chiamatela tentazione. La combinazione perfetta di salame piccante e fior di latte che risveglia i sensi. Pomodoro San Marzano D.O.P., fior di latte, salame ventricina abruzzese piccante al punto giusto, olio EVO e basilico.",
+      en: "San Marzano D.O.P. tomato, fior di latte mozzarella, artisanal Abruzzese ventricina spicy salami, extra virgin olive oil and fresh basil."
+    },
+    priceVal: 8.50,
+    priceStr: "€ 8.50",
+    badge: { it: "Ventricina Piccante", en: "Spicy Ventricina" },
     allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
     image: "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=800&q=80"
   },
   {
-    id: 8,
+    id: 18,
     category: "pizze-classiche",
     title: {
-      it: "Capricciosa Naxiota",
-      en: "Naxos Capricciosa"
+      it: "Capricciosa Rivisitata",
+      en: "Artisanal Capricciosa"
     },
     desc: {
-      it: "Pomodoro, fior di latte, prosciutto cotto alta qualità senza polifosfati, funghi freschi champignon saltati, carciofini alla brace e olive Nocellara del Belice.",
-      en: "Tomato sauce, mozzarella, high-quality ham, sautéed champignon mushrooms, fire-roasted artichokes and Nocellara olives."
+      it: "Pomodoro San Marzano D.O.P., Fior di Latte, Prosciutto Cotto di qualità e Funghi freschi. Il tocco di classe sono i Carciofi Grigliati che offrono una nota affumicata, bilanciata dall'Uovo e dal Basilico fresco. Qualità e tradizione.",
+      en: "San Marzano D.O.P., fior di latte, high quality ham, fresh mushrooms, fire-grilled artichokes with smoky depth, boiled egg and fresh basil."
     },
-    priceVal: 11.50,
-    priceStr: "€ 11.50",
-    badge: { it: "Ricca & Rustica", en: "Rich & Classic" },
+    priceVal: 10.00,
+    priceStr: "€ 10.00",
+    badge: { it: "Carciofi alla Brace", en: "Grilled Artichokes" },
+    allergens: { it: "Glutine, Lattosio, Uova", en: "Gluten, Dairy, Eggs" },
+    image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 19,
+    category: "pizze-classiche",
+    title: {
+      it: "Parmigiana di Melanzane",
+      en: "Eggplant Parmigiana"
+    },
+    desc: {
+      it: "Pomodoro San Marzano D.O.P., mozzarella fior di latte, melanzane a funghetto fritte alla perfezione, prosciutto cotto, scaglie di Parmigiano Reggiano, olio EVO e basilico. Un'esplosione di sapore che ricorda i pranzi della domenica.",
+      en: "San Marzano tomato, fior di latte, fried eggplant cubes, cooked ham, shaved Parmigiano Reggiano, EVOO and fresh basil."
+    },
+    priceVal: 10.00,
+    priceStr: "€ 10.00",
+    badge: { it: "Melanzane & Grana", en: "Classic Sunday" },
     allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
-    image: "https://images.unsplash.com/photo-1590947132387-155cc02f3212?auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1576458088443-04a19bb13da6?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 20,
+    category: "pizze-classiche",
+    title: {
+      it: "La Tonnata (Sapore di Mare)",
+      en: "Tonnata (Mediterranean Tuna)"
+    },
+    desc: {
+      it: "Mozzarella Fior di Latte, Filetti di Tonno sott'olio selezionato, Olive Taggiasche, Cipolla Rossa di Tropea, Capperi e Pomodorini rossi. La dolcezza della cipolla si fonde con la sapidità del tonno e la freschezza dei pomodorini.",
+      en: "Fior di latte, select tuna fillets, Taggiasca olives, Tropea red onion, capers and sweet cherry tomatoes. Vibrant, maritime and fresh."
+    },
+    priceVal: 9.00,
+    priceStr: "€ 9.00",
+    badge: { it: "Filetti di Tonno", en: "Premium Tuna" },
+    allergens: { it: "Glutine, Lattosio, Pesce", en: "Gluten, Dairy, Fish" },
+    image: "https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 21,
+    category: "pizze-classiche",
+    title: {
+      it: "Salsiccia e Friarielli (La Vera Napoli)",
+      en: "Sausage & Friarielli (Naples Classic)"
+    },
+    desc: {
+      it: "Mozzarella Fior di Latte, Salsiccia di maiale sbriciolata, Friarielli (cime di rapa) saltati in padella all'aglio e Olio EVO. Il sapore amarognolo e deciso dei friarielli si sposa perfettamente con la sapidità della salsiccia. Fedele alla ricetta popolare.",
+      en: "Fior di latte, pork sausage, Neapolitan friarielli turnip greens sautéed in garlic and EVOO. The timeless Naples favorite."
+    },
+    priceVal: 10.00,
+    priceStr: "€ 10.00",
+    badge: { it: "La Vera Napoli", en: "Naples Heritage" },
+    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
+    image: "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 22,
+    category: "pizze-classiche",
+    title: {
+      it: "Americana (Wurstel & Patatine)",
+      en: "Americana (Wurstel & Fries)"
+    },
+    desc: {
+      it: "Salsa di pomodoro, Mozzarella fior di latte, Wurstel di qualità selezionati e le nostre patatine fritte dorate e croccanti, con tocco di Olio EVO e Basilico a crudo. Semplice ma irresistibile per grandi e piccoli.",
+      en: "Tomato sauce, mozzarella, selected pork wurstel and crispy golden french fries with extra virgin olive oil."
+    },
+    priceVal: 8.50,
+    priceStr: "€ 8.50",
+    badge: { it: "Molto Richiesta", en: "Popular Choice" },
+    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
+    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80"
   },
 
-  // --- SFIZI & FRITTI ---
+  // --- STUZZICHERIE & FRITTI ---
   {
-    id: 9,
+    id: 23,
     category: "sfizi-fritti",
     title: {
       it: "Tris di Montanarine Napoletane Fritte",
@@ -166,7 +404,7 @@ const menuData = [
     image: "https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?auto=format&fit=crop&w=800&q=80"
   },
   {
-    id: 10,
+    id: 24,
     category: "sfizi-fritti",
     title: {
       it: "Arancinetti Gourmet dello Stretto (4 pz)",
@@ -183,7 +421,7 @@ const menuData = [
     image: "https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=800&q=80"
   },
   {
-    id: 11,
+    id: 25,
     category: "sfizi-fritti",
     title: {
       it: "Frittatina di Pasta alla Sorrentina",
@@ -202,7 +440,7 @@ const menuData = [
 
   // --- LOUNGE & COCKTAILS ---
   {
-    id: 12,
+    id: 26,
     category: "lounge-cocktails",
     title: {
       it: "Kalò Smoked Negroni",
@@ -219,7 +457,7 @@ const menuData = [
     image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80"
   },
   {
-    id: 13,
+    id: 27,
     category: "lounge-cocktails",
     title: {
       it: "Naxos Sunset Spritz",
@@ -236,7 +474,7 @@ const menuData = [
     image: "https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&w=800&q=80"
   },
   {
-    id: 14,
+    id: 28,
     category: "lounge-cocktails",
     title: {
       it: "Etna Mule Rinfrescante",
@@ -253,7 +491,7 @@ const menuData = [
     image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80"
   },
   {
-    id: 15,
+    id: 29,
     category: "lounge-cocktails",
     title: {
       it: "Birra Artigianale dello Stretto alla Spina (0.40L)",
@@ -272,7 +510,7 @@ const menuData = [
 
   // --- DESSERT ARTIGIANALI ---
   {
-    id: 16,
+    id: 30,
     category: "dessert",
     title: {
       it: "Cannolo Scomposto con Ricotta dei Nebrodi",
@@ -289,7 +527,7 @@ const menuData = [
     image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80"
   },
   {
-    id: 17,
+    id: 31,
     category: "dessert",
     title: {
       it: "Babà al Rum Invecchiato & Crema Pasticcera",
@@ -306,7 +544,7 @@ const menuData = [
     image: "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=800&q=80"
   },
   {
-    id: 18,
+    id: 32,
     category: "dessert",
     title: {
       it: "Tiramisù Morbido al Pistacchio di Bronte",
