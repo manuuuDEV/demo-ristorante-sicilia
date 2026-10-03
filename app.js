@@ -723,13 +723,26 @@ bookingForm.addEventListener('submit', (e) => {
   const phone = document.getElementById('b-phone').value.trim();
   const notes = document.getElementById('b-notes').value.trim();
 
+  // Check if chosen day is Wednesday (day 3)
+  if (date) {
+    const selectedDate = new Date(date);
+    if (selectedDate.getDay() === 3) {
+      const proceed = confirm(
+        "Nota: Il mercoledì la sala è chiusa al pubblico per riposo settimanale.\n" +
+        "Sono attivi i servizi di Asporto e Domicilio dalle 17:30 alle 22:00.\n\n" +
+        "Vuoi comunque inviare il messaggio di richiesta su WhatsApp?"
+      );
+      if (!proceed) return;
+    }
+  }
+
   const msg = 
 `Buonasera Kalò Pizza & Lounge Bar!
 Desidero richiedere la prenotazione di un tavolo:
 
 👤 *Nome:* ${name}
 📅 *Data:* ${date}
-⏰ *Orario:* ${time}
+⏰ *Orario:* ${time} (Sala: Gio-Mar 19:00 - 23:00)
 👥 *Ospiti:* ${guests}
 📞 *Cellulare:* ${phone}
 ${notes ? `📝 *Note particolari:* ${notes}` : ''}
@@ -765,7 +778,7 @@ function setLanguage(lang) {
     langItBtn.classList.add('active');
     langEnBtn.classList.remove('active');
 
-    document.getElementById('announcement-text').textContent = "Aperto stasera dalle 17:30 • Via Stracina 16, Giardini Naxos (ME)";
+    document.getElementById('announcement-text').textContent = "🛵 Domicilio & Asporto 17:30–22:00 • 🍕 Sala 19:00–23:00 (Mercoledì Chiuso) • Giardini Naxos";
     document.getElementById('nav-menu').textContent = "Menù Digitale";
     document.getElementById('nav-qr').textContent = "QR al Tavolo";
     document.getElementById('nav-lounge').textContent = "Lounge Bar";
@@ -792,7 +805,7 @@ function setLanguage(lang) {
     langEnBtn.classList.add('active');
     langItBtn.classList.remove('active');
 
-    document.getElementById('announcement-text').textContent = "Open tonight from 5:30 PM • Via Stracina 16, Giardini Naxos (Taormina)";
+    document.getElementById('announcement-text').textContent = "🛵 Delivery & Takeaway 5:30–10:00 PM • 🍕 Dining 7:00–11:00 PM (Closed Wed) • Giardini Naxos";
     document.getElementById('nav-menu').textContent = "Digital Menu";
     document.getElementById('nav-qr').textContent = "Table QR";
     document.getElementById('nav-lounge').textContent = "Lounge Bar";

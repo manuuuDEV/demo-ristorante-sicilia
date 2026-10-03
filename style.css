@@ -1216,6 +1216,68 @@ body {
   font-size: 0.88rem;
 }
 
+.hours-item {
+  background: rgba(22, 26, 38, 0.6);
+  border: 1px solid rgba(220, 177, 98, 0.25);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.hours-breakdown {
+  width: 100%;
+}
+
+.hours-sublist {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.h-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.86rem;
+  padding: 6px 10px;
+  background: rgba(12, 14, 20, 0.5);
+  border-radius: 6px;
+  border-left: 3px solid var(--gold);
+}
+
+.h-label {
+  font-weight: 700;
+  color: var(--gold-light);
+  min-width: 160px;
+}
+
+.h-time {
+  color: var(--text-pure);
+}
+
+.h-tag-closed {
+  background: rgba(231, 76, 60, 0.18);
+  border: 1px solid rgba(231, 76, 60, 0.4);
+  color: #ff6b6b;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-left: auto;
+}
+
+.wednesday-notice {
+  background: rgba(220, 177, 98, 0.1);
+  border: 1px solid rgba(220, 177, 98, 0.3);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  color: var(--gold-light);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
 /* Glass Form */
 .glass-form {
   background: var(--bg-card);

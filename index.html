@@ -28,7 +28,7 @@
     <div class="container announcement-inner">
       <div class="announcement-left">
         <span class="live-dot"></span>
-        <span id="announcement-text">Aperto stasera dalle 17:30 • Via Stracina 16, Giardini Naxos (ME)</span>
+        <span id="announcement-text">🛵 Domicilio & Asporto 17:30–22:00 • 🍕 Sala 19:00–23:00 (Mercoledì Chiuso) • Giardini Naxos</span>
       </div>
       <div class="announcement-right">
         <span class="pill-mini">✨ Menù Touch & QR al Tavolo</span>
@@ -309,11 +309,25 @@
                 <p>Via Stracina 16, 98035 Giardini Naxos (ME)</p>
               </div>
             </div>
-            <div class="c-item">
+            <div class="c-item hours-item">
               <div class="c-icon">⏰</div>
-              <div>
-                <strong id="c-hours-title">Orari di Apertura</strong>
-                <p id="c-hours-sub">Tutti i giorni: 17:30 - 23:00 (Cucina & Pizzeria)</p>
+              <div class="hours-breakdown">
+                <strong id="c-hours-title">Orari Ufficiali di Servizio</strong>
+                <div class="hours-sublist">
+                  <div class="h-row">
+                    <span class="h-label">🍕 Sala & Lounge Bar:</span>
+                    <span class="h-time">Gio – Mar: <strong>19:00 – 23:00</strong></span>
+                    <span class="h-tag-closed">Mercoledì Chiuso</span>
+                  </div>
+                  <div class="h-row">
+                    <span class="h-label">🛵 Consegna a Domicilio:</span>
+                    <span class="h-time">Lun – Dom: <strong>17:30 – 22:00</strong></span>
+                  </div>
+                  <div class="h-row">
+                    <span class="h-label">🛍️ Ritiro da Asporto:</span>
+                    <span class="h-time">Lun – Dom: <strong>17:30 – 22:00</strong></span>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="c-item">
@@ -344,14 +358,16 @@
                 <input type="date" id="b-date" required>
               </div>
               <div class="input-field">
-                <label for="b-time" id="lbl-time">Orario *</label>
+                <label for="b-time" id="lbl-time">Orario (Sala 19:00 - 23:00) *</label>
                 <select id="b-time" required>
+                  <option value="19:00">19:00</option>
                   <option value="19:30">19:30</option>
                   <option value="20:00" selected>20:00</option>
                   <option value="20:30">20:30</option>
                   <option value="21:00">21:00</option>
                   <option value="21:30">21:30</option>
                   <option value="22:00">22:00</option>
+                  <option value="22:30">22:30</option>
                 </select>
               </div>
             </div>
@@ -491,10 +507,11 @@
       </div>
 
       <div class="footer-col">
-        <h4>Posizione & Contatti</h4>
+        <h4>Posizione & Orari Ufficiali</h4>
         <p class="f-info"><strong>Indirizzo:</strong> Via Stracina 16, Giardini Naxos (ME)</p>
         <p class="f-info"><strong>WhatsApp:</strong> +39 339 2185191</p>
-        <p class="f-info"><strong>Apertura:</strong> Tutti i giorni dalle 17:30</p>
+        <p class="f-info"><strong>Sala / Tavoli:</strong> 19:00 - 23:00 (Mercoledì Chiuso)</p>
+        <p class="f-info"><strong>Asporto & Domicilio:</strong> 17:30 - 22:00 (Tutti i giorni)</p>
         <a href="https://wa.me/393392185191" target="_blank" class="f-wa-badge">Scrivici su WhatsApp</a>
       </div>
     </div>
