@@ -2,276 +2,506 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pizza & Lounge Bar | Demo Menu Digitale</title>
-  <meta name="description" content="Menu digitale e sito vetrina ad alte prestazioni per la ristorazione e pizzeria a Giardini Naxos. Cucina tipica, forno a legna e cocktail.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Kalò Experience | Pizza Napoletana & Lounge Bar • Giardini Naxos</title>
+  <meta name="description" content="Esperienza gastronomica d'autore a Giardini Naxos. Pizza napoletana a 48h di lievitazione naturale, cocktail lounge bar d'eccellenza e menù digitale interattivo per smartphone.">
+  
+  <!-- Favicon Monogram -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230B0C10'/><text x='50%' y='68%' font-size='60' font-weight='900' font-family='serif' fill='%23DCB162' text-anchor='middle'>K</text></svg>">
+
+  <!-- Premium Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Top Announcement Bar -->
-  <header class="top-bar">
-    <div class="container top-bar-content">
-      <span>📍 Giardini Naxos • Taormina • Pizza Napoletana & Lounge Bar</span>
-      <div class="lang-switch">
-        <button class="lang-btn active" id="lang-it">IT</button>
-        <span class="sep">|</span>
-        <button class="lang-btn" id="lang-en">EN</button>
+  <!-- Ambient Light Orbs for 3D Depth & Glow -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Announcement Bar -->
+  <aside class="top-announcement">
+    <div class="container announcement-inner">
+      <div class="announcement-left">
+        <span class="live-dot"></span>
+        <span id="announcement-text">Aperto stasera dalle 17:30 • Via Stracina 16, Giardini Naxos (ME)</span>
+      </div>
+      <div class="announcement-right">
+        <span class="pill-mini">✨ Menù Touch & QR al Tavolo</span>
+        <div class="lang-switch" aria-label="Cambia lingua">
+          <button class="lang-btn active" id="lang-it" title="Italiano">IT</button>
+          <span class="slash">/</span>
+          <button class="lang-btn" id="lang-en" title="English">EN</button>
+        </div>
       </div>
     </div>
-  </header>
+  </aside>
 
-  <!-- Navigation -->
+  <!-- Luxury Floating Navbar -->
   <nav class="navbar" id="navbar">
-    <div class="container nav-content">
-      <a href="#" class="brand-logo">
-        <span class="logo-script">Pizzeria & Lounge Bar</span>
-        <span class="logo-main">PREVIEW DEMO</span>
+    <div class="container nav-container">
+      <a href="#" class="brand">
+        <div class="brand-monogram">K</div>
+        <div class="brand-text">
+          <span class="brand-name">KALÒ</span>
+          <span class="brand-sub">PIZZA & LOUNGE BAR</span>
+        </div>
       </a>
 
+      <div class="nav-links">
+        <a href="#menu" class="nav-link" id="nav-menu">Menù Digitale</a>
+        <a href="#qrcode" class="nav-link" id="nav-qr">QR al Tavolo</a>
+        <a href="#cocktail-showcase" class="nav-link" id="nav-lounge">Lounge Bar</a>
+        <a href="#prenota" class="nav-link" id="nav-booking">Prenotazioni</a>
+      </div>
+
       <div class="nav-actions">
-        <button class="btn btn-outline" id="qr-modal-btn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
-          <span>QR Tavolo</span>
+        <button class="btn-icon" id="qr-modal-btn" title="Simula QR Code al Tavolo">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+            <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+            <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
+            <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
+          </svg>
+          <span class="btn-text-desktop" id="btn-qr-label">QR Tavolo</span>
         </button>
-        <a href="#prenota" class="btn btn-primary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        <a href="#prenota" class="btn-gold" id="btn-nav-reserve">
           <span>Prenota Tavolo</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-bg-overlay"></div>
+  <!-- Hero Cinema Showcase -->
+  <header class="hero-section">
+    <div class="hero-backdrop-img"></div>
+    <div class="hero-overlay"></div>
     <div class="container hero-content">
-      <div class="badge-tag">Giardini Naxos • Taormina</div>
-      <h1 class="hero-title">L'Arte della Pizza e dei Cocktail d'Autore.</h1>
-      <p class="hero-subtitle">
-        Impasti a lenta lievitazione, ingredienti di prima scelta, cocktail signature e accoglienza esclusiva.
+      <div class="hero-badge">
+        <span class="badge-star">★ 4.6</span>
+        <span class="badge-sep">•</span>
+        <span id="hero-badge-reviews">Oltre 500 Recensioni Verificate a Giardini Naxos</span>
+      </div>
+
+      <h1 class="hero-title" id="hero-title">
+        La Vera Pizza Napoletana <br>
+        <span class="gold-gradient">incontra l'Arte del Lounge.</span>
+      </h1>
+
+      <p class="hero-desc" id="hero-desc">
+        Farine biologiche selezionate, lievitazione naturale di 48 ore a temperatura controllata e pomodoro San Marzano D.O.P. per una leggerezza senza pari, accompagnati dalla mixology d'autore affacciata sulla costa di Naxos.
       </p>
 
-      <div class="hero-cta-group">
-        <a href="#menu" class="btn btn-lg btn-primary">Esplora il Menu Digitale</a>
-        <a href="#prenota" class="btn btn-lg btn-glass">
-          <span>Prenota su WhatsApp</span>
+      <div class="hero-buttons">
+        <a href="#menu" class="btn-main" id="hero-btn-menu">
+          <span>Esplora la Carta Digitale</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+        </a>
+        <a href="https://wa.me/393392185191?text=Buonasera%20Kal%C3%B2%2C%20vorrei%20informazioni%20per%20un%20tavolo" target="_blank" class="btn-glass" id="hero-btn-wa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+          <span>WhatsApp Rapido (+39 339 2185191)</span>
         </a>
       </div>
 
-      <div class="hero-stats">
-        <div class="stat-card">
-          <div class="stat-num">4.6 ★</div>
-          <div class="stat-label">Oltre 500 recensioni Google</div>
+      <!-- Feature Highlight Badges -->
+      <div class="hero-highlights">
+        <div class="highlight-item">
+          <div class="highlight-icon">🔥</div>
+          <div class="highlight-info">
+            <strong id="hl-1-title">Forno a 450°C</strong>
+            <span id="hl-1-sub">Cottura rapida con cornicione alveolato</span>
+          </div>
         </div>
-        <div class="stat-card">
-          <div class="stat-num">100%</div>
-          <div class="stat-label">Ingredienti Selezionati</div>
+        <div class="highlight-item">
+          <div class="highlight-icon">🌾</div>
+          <div class="highlight-info">
+            <strong id="hl-2-title">Lievito Madre & 48h</strong>
+            <span id="hl-2-sub">Altissima digeribilità garantita</span>
+          </div>
         </div>
-        <div class="stat-card">
-          <div class="stat-num">48h</div>
-          <div class="stat-label">Lievitazione Naturale</div>
+        <div class="highlight-item">
+          <div class="highlight-icon">🍸</div>
+          <div class="highlight-info">
+            <strong id="hl-3-title">Signature Lounge Bar</strong>
+            <span id="hl-3-sub">Cocktail artigianali & distillati rari</span>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- Interactive Menu Section -->
+  <!-- Interactive Digital Menu Section -->
   <section class="menu-section" id="menu">
     <div class="container">
-      <div class="section-header">
-        <span class="sub-heading">Esperienza Gastronomica</span>
-        <h2 class="section-title">Menu Interattivo da Smartphone</h2>
-        <p class="section-desc">Consultabile all'istante dal tuo smartphone con filtri rapidi, allergeni e ricerca istantanea.</p>
+      
+      <div class="section-title-wrap">
+        <span class="gold-subtitle" id="menu-pretitle">ESPERIENZA SMARTPHONE & TAVOLO</span>
+        <h2 class="section-heading" id="menu-main-title">Il Menù Digitale Kalò</h2>
+        <p class="section-lead" id="menu-main-desc">Fotografie ad alta definizione, allergeni dettagliati, ingredienti D.O.P. e selezione portate istantanea con invio diretto via WhatsApp.</p>
       </div>
 
-      <!-- Search & Filters -->
-      <div class="menu-controls">
-        <div class="search-box">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <input type="text" id="menu-search" placeholder="Cerca una pizza o portata (es. 'Margherita', 'Pistacchio', 'Bufala')...">
+      <!-- Table Selector Bar -->
+      <div class="table-selector-strip">
+        <div class="table-selector-label">
+          <span class="live-dot-gold"></span>
+          <span id="table-sel-text">Posizione al locale:</span>
         </div>
-
-        <div class="category-pills" id="category-pills">
-          <button class="pill-btn active" data-category="all">Tutte le Proposte</button>
-          <button class="pill-btn" data-category="antipasti">Stuzzicherie & Fritti</button>
-          <button class="pill-btn" data-category="pizze">Pizze Gourmet & Tradizionali</button>
-          <button class="pill-btn" data-category="primi">Primi & Cucina</button>
-          <button class="pill-btn" data-category="secondi">Secondi</button>
-          <button class="pill-btn" data-category="dolci">Dessert</button>
+        <div class="table-selector-chips">
+          <button class="table-chip active" data-table="Tavolo 08">📍 Tavolo 08 (Interno)</button>
+          <button class="table-chip" data-table="Tavolo Terrazza">🌿 Terrazza Lounge</button>
+          <button class="table-chip" data-table="Tavolo Saletta">🍷 Saletta Privata</button>
+          <button class="table-chip" data-table="Asporto / Take Away">🛍️ Asporto / Take Away</button>
         </div>
       </div>
 
-      <!-- Menu Grid -->
-      <div class="menu-grid" id="menu-grid">
-        <!-- Rendered dynamically by app.js -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Table QR Section -->
-  <section class="qr-promo-section">
-    <div class="container qr-promo-card">
-      <div class="qr-promo-text">
-        <span class="badge-tag">Innovazione per i Tuoi Clienti</span>
-        <h2>Menu al Tavolo Istantaneo con QR Code</h2>
-        <p>
-          I clienti inquadrano il QR code sul tavolo: visualizzano subito foto in alta definizione, descrizioni bilingue e allergeni senza dover scaricare app o registrarsi.
-        </p>
-        <ul class="benefit-list">
-          <li>⚡ <strong>Caricamento in 0.4 secondi</strong> anche con connessione mobile debole</li>
-          <li>🇮🇹 🇬🇧 <strong>Bilingue automatico</strong> (Italiano e Inglese per turisti)</li>
-          <li>💰 <strong>Piattaforma proprietaria</strong> senza canoni esterni di terze parti</li>
-        </ul>
-      </div>
-      <div class="qr-promo-visual">
-        <div class="qr-card-mockup">
-          <div class="qr-box">
-            <svg class="qr-svg" viewBox="0 0 100 100" fill="currentColor">
-              <path d="M10 10h30v30h-30z M15 15h20v20h-20z M20 20h10v10h-10z M60 10h30v30h-30z M65 15h20v20h-20z M70 20h10v10h-10z M10 60h30v30h-30z M15 65h20v20h-20z M20 70h10v10h-10z M45 15h10v10h-10z M45 35h10v10h-10z M15 45h10v10h-10z M35 45h10v10h-10z M55 45h10v10h-10z M75 45h10v10h-10z M45 55h10v10h-10z M65 55h10v10h-10z M85 55h10v10h-10z M45 75h10v10h-10z M65 75h10v10h-10z M85 75h10v10h-10z M55 85h20v10h-20z"/>
-            </svg>
-          </div>
-          <span class="qr-mockup-label">Inquadra per il Menu</span>
-          <span class="qr-mockup-sub">Tavolo • Accesso Rapido</span>
+      <!-- Search & Category Filters -->
+      <div class="filter-sticky-bar">
+        <div class="search-input-wrap">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="menu-search" placeholder="Cerca pizza, cocktail o ingrediente (es. 'Pistacchio', 'Bufala', 'Negroni')...">
+          <button id="clear-search" class="clear-btn" title="Cancella ricerca">&times;</button>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Direct WhatsApp Reservation Section -->
-  <section class="reservation-section" id="prenota">
-    <div class="container reservation-container">
-      <div class="reservation-info">
-        <span class="sub-heading">Prenotazione Diretta</span>
-        <h2>Riserva il Tuo Tavolo</h2>
-        <p>Prenota in 30 secondi senza intermediari o commissioni. La richiesta arriva istantaneamente su WhatsApp.</p>
-
-        <div class="info-items">
-          <div class="info-item">
-            <span class="info-icon">📍</span>
-            <div>
-              <strong>Dove siamo</strong>
-              <p>Giardini Naxos (ME)</p>
-            </div>
-          </div>
-          <div class="info-item">
-            <span class="info-icon">⏰</span>
-            <div>
-              <strong>Orari di Apertura</strong>
-              <p>Aperto tutti i giorni dalle 17:30 alle 23:00</p>
-            </div>
-          </div>
-          <div class="info-item">
-            <span class="info-icon">📞</span>
-            <div>
-              <strong>Prenotazioni WhatsApp</strong>
-              <p>Conferma rapida al tavolo</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="reservation-form-card">
-        <h3>Modulo Rapido di Prenotazione</h3>
-        <form id="reservation-form">
-          <div class="form-group">
-            <label for="res-name">Nome e Cognome *</label>
-            <input type="text" id="res-name" required placeholder="Es. Mario Rossi">
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="res-date">Data *</label>
-              <input type="date" id="res-date" required>
-            </div>
-            <div class="form-group">
-              <label for="res-time">Orario *</label>
-              <select id="res-time" required>
-                <option value="19:30">19:30</option>
-                <option value="20:00" selected>20:00</option>
-                <option value="20:30">20:30</option>
-                <option value="21:00">21:00</option>
-                <option value="21:30">21:30</option>
-                <option value="22:00">22:00</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="res-guests">Persone *</label>
-              <select id="res-guests" required>
-                <option value="1">1 Persona</option>
-                <option value="2" selected>2 Persone</option>
-                <option value="3">3 Persone</option>
-                <option value="4">4 Persone</option>
-                <option value="5">5 Persone</option>
-                <option value="6+">6 o più persone</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="res-phone">Recapito Telefonico *</label>
-              <input type="tel" id="res-phone" required placeholder="Es. 333 1234567">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="res-notes">Note speciali (intolleranze, celiachia, seggiolone)</label>
-            <input type="text" id="res-notes" placeholder="Es. 1 celiaco, tavolo all'aperto">
-          </div>
-
-          <button type="submit" class="btn btn-primary btn-block btn-lg">
-            <span>Invia Richiesta via WhatsApp</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <div class="category-scroll" id="category-bar">
+          <button class="cat-pill active" data-cat="all">
+            <span class="cat-icon">✦</span>
+            <span class="cat-name">Tutto il Menù</span>
           </button>
-        </form>
+          <button class="cat-pill" data-cat="pizze-gourmet">
+            <span class="cat-icon">👑</span>
+            <span class="cat-name">Pizze Gourmet</span>
+          </button>
+          <button class="cat-pill" data-cat="pizze-classiche">
+            <span class="cat-icon">🍕</span>
+            <span class="cat-name">Pizze Tradizionali</span>
+          </button>
+          <button class="cat-pill" data-cat="sfizi-fritti">
+            <span class="cat-icon">🍟</span>
+            <span class="cat-name">Stuzzicherie & Fritti</span>
+          </button>
+          <button class="cat-pill" data-cat="lounge-cocktails">
+            <span class="cat-icon">🍸</span>
+            <span class="cat-name">Cocktail & Lounge</span>
+          </button>
+          <button class="cat-pill" data-cat="dessert">
+            <span class="cat-icon">🍨</span>
+            <span class="cat-name">Dolci Artigianali</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Menu Grid Cards -->
+      <div class="menu-grid" id="menu-grid">
+        <!-- Rendered with rich cards and HD imagery by app.js -->
       </div>
     </div>
   </section>
 
-  <!-- Modal for QR Preview -->
-  <div class="modal-overlay" id="qr-modal">
-    <div class="modal-card">
-      <button class="modal-close" id="modal-close">&times;</button>
-      <h3>Scansiona il Menu Digitale</h3>
-      <p>Simulazione dell'esperienza cliente al tavolo.</p>
-      <div class="modal-qr-container">
-        <svg class="qr-svg-lg" viewBox="0 0 100 100" fill="currentColor">
-          <path d="M10 10h30v30h-30z M15 15h20v20h-20z M20 20h10v10h-10z M60 10h30v30h-30z M65 15h20v20h-20z M70 20h10v10h-10z M10 60h30v30h-30z M15 65h20v20h-20z M20 70h10v10h-10z M45 15h10v10h-10z M45 35h10v10h-10z M15 45h10v10h-10z M35 45h10v10h-10z M55 45h10v10h-10z M75 45h10v10h-10z M45 55h10v10h-10z M65 55h10v10h-10z M85 55h10v10h-10z M45 75h10v10h-10z M65 75h10v10h-10z M85 75h10v10h-10z M55 85h20v10h-20z"/>
-        </svg>
+  <!-- Interactive QR Code Presentation -->
+  <section class="qr-experience-section" id="qrcode">
+    <div class="container">
+      <div class="qr-card-glass">
+        <div class="qr-text-col">
+          <div class="tag-gold" id="qr-tag">INNOVAZIONE DIGITALE PER IL LOCALE</div>
+          <h2 class="qr-heading" id="qr-heading">La carta digitale che valorizza ogni tavolo.</h2>
+          <p class="qr-desc" id="qr-desc">
+            Nessuna applicazione da installare. Il cliente siede, inquadra il segnatavolo in legno o plexiglass serigrafato con la fotocamera del suo smartphone e il menù si apre in 0.3 secondi con foto appetitose, prezzi aggiornati e lingue selezionabili.
+          </p>
+          
+          <div class="qr-perks">
+            <div class="perk-box">
+              <span class="perk-num">0.3s</span>
+              <span class="perk-label" id="perk-1-lbl">Apertura istantanea senza app né registrazione</span>
+            </div>
+            <div class="perk-box">
+              <span class="perk-num">100%</span>
+              <span class="perk-label" id="perk-2-lbl">Bilingue (IT/EN) per turisti a Giardini Naxos</span>
+            </div>
+            <div class="perk-box">
+              <span class="perk-num">+35%</span>
+              <span class="perk-label" id="perk-3-lbl">Vendite di cocktail & dolci grazie alle foto HD</span>
+            </div>
+          </div>
+
+          <div class="qr-cta-row">
+            <button class="btn-main" id="btn-test-qr-stand">
+              <span>Prova la Scansione al Tavolo</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="qr-visual-col">
+          <div class="qr-mockup-stand" id="qr-stand-visual">
+            <div class="stand-wood-rim"></div>
+            <div class="mockup-header">
+              <span class="mockup-logo">KALÒ</span>
+              <span class="mockup-table" id="mockup-table-label">TAVOLO 08</span>
+            </div>
+            <div class="qr-frame">
+              <img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://manuuudev.github.io/demo-ristorante-sicilia/&color=12141A&bgcolor=FFFFFF&qzone=1" alt="QR Code Tavolo Kalò" class="qr-real-img" loading="lazy">
+            </div>
+            <span class="mockup-hint">Inquadra con la fotocamera per aprire il menù</span>
+            <div class="stand-shine"></div>
+          </div>
+        </div>
       </div>
-      <p class="small-text">Menu interattivo ad alta velocità ottimizzato per smartphone</p>
+    </div>
+  </section>
+
+  <!-- Lounge Cocktail Spotlight Section -->
+  <section class="lounge-spotlight-section" id="cocktail-showcase">
+    <div class="container">
+      <div class="spotlight-card">
+        <div class="spotlight-text">
+          <span class="gold-subtitle">LOUNGE & MIXOLOGY CORNER</span>
+          <h2 class="spotlight-title">Non Solo Pizza: L'Atmosfera Lounge Bar</h2>
+          <p class="spotlight-desc">
+            Dall'aperitivo al dopocena, la nostra cocktail list propone grandi classici internazionali e signature drink preparati con botaniche siciliane, gin dell'Etna e frutta fresca locale.
+          </p>
+          <div class="spotlight-features">
+            <div class="sf-item">
+              <span class="sf-icon">🍸</span>
+              <div>
+                <strong>Aperitivo con Stuzzicherie Calde</strong>
+                <span>Dalle 17:30 alle 20:30 ogni giorno</span>
+              </div>
+            </div>
+            <div class="sf-item">
+              <span class="sf-icon">🍋</span>
+              <div>
+                <strong>Botaniche & Agrumi di Sicilia</strong>
+                <span>Ingredienti freschi a chilometro zero</span>
+              </div>
+            </div>
+          </div>
+          <a href="#menu" class="btn-gold" onclick="document.querySelector('[data-cat=\'lounge-cocktails\']').click();">
+            <span>Guarda la Cocktail List Completa</span>
+          </a>
+        </div>
+        <div class="spotlight-image-wrap">
+          <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=900&q=80" alt="Cocktail Kalò" class="spotlight-img" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation & Contact -->
+  <section class="reservation-section" id="prenota">
+    <div class="container">
+      <div class="res-layout">
+        
+        <div class="res-info-side">
+          <span class="gold-subtitle" id="booking-pretitle">PRENOTAZIONI TAVOLI & INFORMAZIONI</span>
+          <h2 class="res-title" id="booking-title">Riserva la Tua Serata da Kalò.</h2>
+          <p class="res-sub" id="booking-desc">Compila il modulo rapido: generiamo all'istante il messaggio formattato pronto da inviare al WhatsApp ufficiale del locale (+39 339 2185191).</p>
+          
+          <div class="contact-details">
+            <div class="c-item">
+              <div class="c-icon">📍</div>
+              <div>
+                <strong id="c-loc-title">Indirizzo & Location</strong>
+                <p>Via Stracina 16, 98035 Giardini Naxos (ME)</p>
+              </div>
+            </div>
+            <div class="c-item">
+              <div class="c-icon">⏰</div>
+              <div>
+                <strong id="c-hours-title">Orari di Apertura</strong>
+                <p id="c-hours-sub">Tutti i giorni: 17:30 - 23:00 (Cucina & Pizzeria)</p>
+              </div>
+            </div>
+            <div class="c-item">
+              <div class="c-icon">💬</div>
+              <div>
+                <strong id="c-wa-title">WhatsApp Ufficiale</strong>
+                <p><a href="https://wa.me/393392185191" target="_blank" style="color: #25d366; text-decoration: none; font-weight: 700;">+39 339 2185191</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="res-form-side">
+          <form class="glass-form" id="booking-form">
+            <div class="form-header-badge">
+              <span>PRENOTAZIONE DIRETTA WHATSAPP</span>
+            </div>
+            <h3 class="form-title" id="form-heading">Richiesta Tavolo Istantanea</h3>
+            
+            <div class="input-field">
+              <label for="b-name" id="lbl-name">Nome e Cognome *</label>
+              <input type="text" id="b-name" placeholder="Es. Marco Rossi" required>
+            </div>
+
+            <div class="form-two-col">
+              <div class="input-field">
+                <label for="b-date" id="lbl-date">Data Desiderata *</label>
+                <input type="date" id="b-date" required>
+              </div>
+              <div class="input-field">
+                <label for="b-time" id="lbl-time">Orario *</label>
+                <select id="b-time" required>
+                  <option value="19:30">19:30</option>
+                  <option value="20:00" selected>20:00</option>
+                  <option value="20:30">20:30</option>
+                  <option value="21:00">21:00</option>
+                  <option value="21:30">21:30</option>
+                  <option value="22:00">22:00</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-two-col">
+              <div class="input-field">
+                <label for="b-guests" id="lbl-guests">Numero Ospiti *</label>
+                <select id="b-guests" required>
+                  <option value="2" selected>2 Persone</option>
+                  <option value="3">3 Persone</option>
+                  <option value="4">4 Persone</option>
+                  <option value="5">5 Persone</option>
+                  <option value="6+">Tavolata Gruppo (6+ persone)</option>
+                </select>
+              </div>
+              <div class="input-field">
+                <label for="b-phone" id="lbl-phone">Telefono Cellulare *</label>
+                <input type="tel" id="b-phone" placeholder="Es. 339 2185191" required>
+              </div>
+            </div>
+
+            <div class="input-field">
+              <label for="b-notes" id="lbl-notes">Note speciali (es. tavolo all'aperto, intolleranze al glutine o celiachia)</label>
+              <input type="text" id="b-notes" placeholder="Opzionale">
+            </div>
+
+            <button type="submit" class="btn-submit" id="btn-submit-booking">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+              <span>Invia Richiesta su WhatsApp</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Floating Mobile Order Bar -->
+  <aside class="floating-order-bar" id="floating-bar" aria-label="Selezione portate">
+    <div class="order-bar-content">
+      <div class="order-summary" id="tray-trigger-summary">
+        <span class="order-count-badge" id="order-count">0</span>
+        <div class="order-text-wrap">
+          <span class="order-title" id="order-bar-title">Selezione Portate al Tavolo</span>
+          <span class="order-sub" id="order-total-price">Tocca i piatti per comporre l'ordine</span>
+        </div>
+      </div>
+      <button class="btn-view-selection" id="open-tray-btn">Vedi Ordine</button>
+    </div>
+  </aside>
+
+  <!-- Tray Modal / Bottom Sheet -->
+  <div class="tray-modal" id="tray-modal">
+    <div class="tray-backdrop" id="tray-backdrop"></div>
+    <div class="tray-sheet">
+      <div class="tray-header">
+        <div>
+          <h3 id="tray-title-text">La Tua Selezione al Tavolo</h3>
+          <span class="tray-sub-location" id="tray-current-table">Tavolo 08 • Kalò Giardini Naxos</span>
+        </div>
+        <button class="close-tray" id="close-tray" title="Chiudi">&times;</button>
+      </div>
+      <div class="tray-items-list" id="tray-items">
+        <!-- Injected dynamically -->
+      </div>
+      <div class="tray-footer">
+        <div class="tray-total-row">
+          <span id="tray-total-label">Totale Stimato:</span>
+          <strong id="tray-total-val">€ 0.00</strong>
+        </div>
+        <button class="btn-gold btn-block" id="send-tray-whatsapp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+          <span id="tray-btn-text">Invia Ordine su WhatsApp al Locale</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- QR Simulation Modal -->
+  <div class="qr-modal-dialog" id="qr-dialog">
+    <div class="qr-dialog-card">
+      <button class="dialog-close" id="dialog-close" title="Chiudi">&times;</button>
+      <span class="dialog-badge">SIMULAZIONE TAVOLO SMARTPHONE</span>
+      <h3>Scansiona il Segnatavolo</h3>
+      <p class="dialog-desc">Inquadra con il tuo smartphone per testare l'apertura istantanea del menù su rete mobile:</p>
+      <div class="dialog-qr-wrap">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&data=https://manuuudev.github.io/demo-ristorante-sicilia/&color=12141A&bgcolor=FFFFFF&qzone=1" alt="QR Code Demo" class="dialog-qr-img" width="200" height="200">
+      </div>
+      <p class="dialog-note">Nessun'attesa del cameriere per la carta. Menù sempre aggiornato, elegante e multilingue.</p>
+    </div>
+  </div>
+
+  <!-- Fullscreen HD Image Lightbox Modal -->
+  <div class="img-lightbox" id="img-lightbox">
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+      <div class="lightbox-img-box">
+        <img src="" alt="" id="lightbox-img">
+      </div>
+      <div class="lightbox-meta">
+        <span class="lightbox-badge" id="lightbox-badge">Signature</span>
+        <h4 id="lightbox-title">Titolo Piatto</h4>
+        <p id="lightbox-desc">Descrizione ingredienti</p>
+        <div class="lightbox-price-row">
+          <span class="lightbox-price" id="lightbox-price">€ 0.00</span>
+          <button class="btn-gold" id="lightbox-add-btn">Aggiungi all'Ordine</button>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-content">
-      <div class="footer-col">
-        <div class="brand-logo">
-          <span class="logo-script">Pizza & Gourmet</span>
-          <span class="logo-main">LOUNGE EXPERIENCE</span>
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-col-main">
+        <div class="brand">
+          <div class="brand-monogram">K</div>
+          <div class="brand-text">
+            <span class="brand-name">KALÒ</span>
+            <span class="brand-sub">PIZZA & LOUNGE BAR</span>
+          </div>
         </div>
-        <p class="footer-bio">Piattaforma digitale ad alte prestazioni per la ristorazione e pizza napoletana a Giardini Naxos e Taormina.</p>
+        <p class="footer-about">
+          Proposta gastronomica d'eccellenza a Giardini Naxos (ME). Pizze veraci a lunga lievitazione, stuzzicherie campane e siciliane e miscelazione contemporanea per serate indimenticabili.
+        </p>
       </div>
+
       <div class="footer-col">
-        <h4>Caratteristiche del Menu</h4>
+        <h4>Vantaggi del Menù Touch</h4>
         <ul>
-          <li>✓ Consultazione istantanea senza attese</li>
-          <li>✓ Grafica 100% responsive per ogni smartphone</li>
-          <li>✓ Modulo prenotazione diretta WhatsApp</li>
+          <li>✓ Scansione immediata senza download</li>
+          <li>✓ Bilingue Italiano / Inglese</li>
+          <li>✓ Aggiornamento prezzi e piatti in 60 secondi</li>
+          <li>✓ Ordine e prenotazioni diretti su WhatsApp</li>
         </ul>
       </div>
+
       <div class="footer-col">
-        <h4>Filosofia & Accoglienza</h4>
-        <p>Impasti a lenta lievitazione, ingredienti d'eccellenza e servizio al tavolo d'avanguardia.</p>
+        <h4>Posizione & Contatti</h4>
+        <p class="f-info"><strong>Indirizzo:</strong> Via Stracina 16, Giardini Naxos (ME)</p>
+        <p class="f-info"><strong>WhatsApp:</strong> +39 339 2185191</p>
+        <p class="f-info"><strong>Apertura:</strong> Tutti i giorni dalle 17:30</p>
+        <a href="https://wa.me/393392185191" target="_blank" class="f-wa-badge">Scrivici su WhatsApp</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2026 Demo Interattiva • Piattaforma Web & Menu Digitale</p>
+    <div class="footer-bottom-bar">
+      <div class="container">
+        <p>© 2026 Kalò Pizza & Lounge Bar • Giardini Naxos (ME) • Tutti i diritti riservati</p>
+      </div>
     </div>
   </footer>
 
