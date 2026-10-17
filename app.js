@@ -1,1087 +1,896 @@
 // =========================================================================
-// KALÒ PIZZA & LOUNGE BAR - GIARDINI NAXOS (ME)
+// TRATTORIA PARADISICULO - MESSINA (ME)
 // Interactive Digital Menu & Table Experience Engine
-// Client WhatsApp: +39 339 2185191
+// Client WhatsApp: +39 340 126 7943
 // =========================================================================
 
-const KALO_WHATSAPP = "393392185191";
+const PARADISICULO_WHATSAPP = "393401267943";
 
 const menuData = [
-  // --- PIZZE GOURMET KALÒ ---
+  // --- GLI ANTIPASTI DI MARE & TERRA ---
   {
     id: 1,
-    category: "pizze-gourmet",
+    category: "antipasti",
+    diet: ["pesce", "tradizionale"],
     title: {
-      it: "Kalò (La Signature)",
-      en: "Kalò (The Signature)"
+      it: "Pepata di Cozze al Limone Intermezzo",
+      en: "Messinese Peppered Mussels"
     },
     desc: {
-      it: "Crema di funghi al tartufo, Fior di Latte, Funghi Porcini, Asparagi, Olio EVO e Basilico. L'incontro perfetto tra l'intensità del sottobosco e l'eleganza. Il sapore profondo del tartufo si bilancia con la delicatezza dei porcini e la nota leggermente amarognola degli asparagi. Per veri intenditori.",
-      en: "Truffle mushroom cream, Fior di Latte mozzarella, Porcini mushrooms, Asparagus, EVOO and fresh basil. A harmonious balance of earthy richness and gourmet elegance."
+      it: "Cozze freschissime aperte a fiamma viva in padella con abbondante pepe nero macinato al momento, spicchi di limone messinese, aglio dolce e prezzemolo fresco. Servite con fette di pane casereccio abbrustolito.",
+      en: "Fresh local mussels sautéed with freshly ground black pepper, fresh Sicilian lemon, sweet garlic and parsley. Served with toasted rustic bread."
     },
-    priceVal: 13.00,
-    priceStr: "€ 13.00",
-    badge: { it: "Signature Kalò", en: "Kalò Signature" },
-    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
-    image: "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=800&q=80"
+    priceVal: 9.00,
+    priceStr: "€ 9.00",
+    badge: { it: "Fresco di Giornata", en: "Fresh Catch" },
+    allergens: { it: "Molluschi, Glutine", en: "Molluscs, Gluten" },
+    image: "https://images.unsplash.com/photo-1548943487-a2e4e43b4853?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 2,
-    category: "pizze-gourmet",
+    category: "antipasti",
+    diet: ["pesce", "tradizionale"],
     title: {
-      it: "Mortazza (Pistacchio & Burrata)",
-      en: "Mortazza (Pistachio & Burrata)"
+      it: "Sarde a Beccafico alla Messinese",
+      en: "Messinese Style Stuffed Sardines"
     },
     desc: {
-      it: "Mozzarella, Pesto di Pistacchio, Mascarpone, Burrata, Mortadella (con pistacchio), Farina di Pistacchio, Olio EVO e Basilico. Un inno alla Sicilia e all'Emilia in un morso indimenticabile: la sapidità della mortadella incontra la dolcezza del pistacchio, con la morbidezza vellutata della burrata.",
-      en: "Mozzarella, Bronte pistachio pesto, mascarpone, whole creamy burrata, artisanal mortadella, pistachio flour and EVOO. A luscious hymn uniting Sicily and Emilia."
+      it: "Sarde freschissime aperte a libro, farcite con pangrattato tostato aromatizzato, pinoli, uva sultanina, alloro fresco e succo d'arancia nostrana. Cotte al forno con delicatezza e profumo d'agrumi.",
+      en: "Fresh sardines rolled with toasted breadcrumbs, pine nuts, sultanas, fresh bay leaf and citrus zest, gently baked to golden perfection."
     },
-    priceVal: 12.00,
-    priceStr: "€ 12.00",
-    badge: { it: "Top Gourmet", en: "Top Gourmet" },
-    allergens: { it: "Glutine, Lattosio, Frutta a guscio", en: "Gluten, Dairy, Tree Nuts" },
-    image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80"
+    priceVal: 10.00,
+    priceStr: "€ 10.00",
+    badge: { it: "Tradizione Storica", en: "Traditional" },
+    allergens: { it: "Pesce, Glutine, Frutta a guscio", en: "Fish, Gluten, Tree Nuts" },
+    image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 3,
-    category: "pizze-gourmet",
+    category: "antipasti",
+    diet: ["pesce"],
     title: {
-      it: "Burrata & Crudo di Parma",
-      en: "Burrata & Parma Prosciutto"
+      it: "Polpo Verace con Patate Nostrane",
+      en: "Octopus & Potato Salad"
     },
     desc: {
-      it: "Pomodoro San Marzano D.O.P., Burrata Pugliese, Prosciutto Crudo di Parma, Olio EVO e Basilico. Base San Marzano cotta alla perfezione su cui viene adagiata a freddo una generosa Burrata Pugliese dal cuore cremoso e setoso, con fette sottili di Crudo di Parma DOP. Freschezza e qualità assolute.",
-      en: "San Marzano D.O.P. tomato sauce, fresh creamy Pugliese burrata, thin Parma DOP cured prosciutto and fragrant basil. Absolute quality and freshness."
+      it: "Polpo tenerissimo lessato a regola d'arte unito a patate cotte al vapore, sedano croccante, prezzemolo fresco e condito con emulsione di olio extravergine d'oliva dei colli messinesi e limone.",
+      en: "Tender local octopus tossed with steamed potatoes, crunchy celery, fresh parsley and an emulsion of Sicilian extra virgin olive oil and lemon."
     },
     priceVal: 12.00,
     priceStr: "€ 12.00",
-    badge: { it: "Burrata Pugliese", en: "Creamy Burrata" },
-    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
-    image: "https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&w=800&q=80"
+    badge: { it: "Tenerissimo", en: "Extra Tender" },
+    allergens: { it: "Molluschi, Sedano", en: "Molluscs, Celery" },
+    image: "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 4,
-    category: "pizze-gourmet",
+    category: "antipasti",
+    diet: ["tradizionale"],
     title: {
-      it: "Bufala E Pepe (L'Equilibrio Perfetto)",
-      en: "Bufala & Pepper (Perfect Balance)"
+      it: "Caponata Messinese con Mandorle Tostate",
+      en: "Messinese Caponata with Toasted Almonds"
     },
     desc: {
-      it: "Sinfonia di freschezza e croccantezza: su base rossa leggermente cotta, Mozzarella di Bufala Campana DOP, Guanciale Croccante, Datterini di Pachino Confit, Pepe Nero macinato fresco e Basilico. Un'esperienza cremosa, sapida e profumatissima.",
-      en: "Light tomato base, Buffalo Mozzarella Campana DOP, crispy pork cheek guanciale, Pachino date tomato confit and black pepper. Rich, savory and intensely aromatic."
-    },
-    priceVal: 12.00,
-    priceStr: "€ 12.00",
-    badge: { it: "Guanciale Croccante", en: "Crispy Guanciale" },
-    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
-    image: "https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 5,
-    category: "pizze-gourmet",
-    title: {
-      it: "Brontese (Speck & Pistacchio)",
-      en: "Brontese (Speck & Pistachio)"
-    },
-    desc: {
-      it: "Fior di Latte, Speck Alto Adige, Pesto di Pistacchio, Granella di Pistacchio, Olio EVO e Basilico. L'affumicatura delicata dello Speck incontra l'intensità aromatica del pistacchio. Un piatto bilanciato dove la sapidità è stemperata dalla dolcezza del frutto secco.",
-      en: "Fior di Latte, Alto Adige smoked speck, pistachio pesto, toasted crushed pistachios and EVOO. A harmonious combination of Alpine smokiness and Sicilian sweetness."
-    },
-    priceVal: 10.00,
-    priceStr: "€ 10.00",
-    badge: { it: "Pistacchio di Bronte", en: "Bronte Pistachio" },
-    allergens: { it: "Glutine, Lattosio, Frutta a guscio", en: "Gluten, Dairy, Tree Nuts" },
-    image: "https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 6,
-    category: "pizze-gourmet",
-    title: {
-      it: "Nerano (Omaggio alla Costiera)",
-      en: "Nerano (Amalfi Coast Tribute)"
-    },
-    desc: {
-      it: "Crema di Zucchine, Fior di Latte, Chips di Zucchina fresca, Provolone del Monaco D.O.P., Olio EVO e Basilico. L'eleganza della Costiera Amalfitana in un morso: la base vellutata accoglie la sapidità piccantina del Provolone del Monaco e la croccantezza irresistibile delle chips.",
-      en: "Velvety zucchini cream, fior di latte, crispy zucchini chips, Provolone del Monaco D.O.P., EVOO and basil. Pure Mediterranean elegance with a crisp bite."
-    },
-    priceVal: 10.00,
-    priceStr: "€ 10.00",
-    badge: { it: "Provolone del Monaco", en: "Provolone D.O.P." },
-    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
-    image: "https://images.unsplash.com/photo-1585238342024-78d387f4a707?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 7,
-    category: "pizze-gourmet",
-    title: {
-      it: "Scarola E Alici",
-      en: "Escarole & Anchovies"
-    },
-    desc: {
-      it: "Il sapore autentico del Mediterraneo. Base bianca con Scarola saltata a regola d'arte che avvolge le prelibate Alici, Provola di Bufala di Paestum cremosa, pomodorini confit dolci e origano profumato.",
-      en: "White base with skillfully sautéed escarole, Mediterranean anchovies, Paestum smoked buffalo provola, sweet tomato confit and wild oregano."
-    },
-    priceVal: 12.00,
-    priceStr: "€ 12.00",
-    badge: { it: "Sapore di Mare", en: "Mediterranean" },
-    allergens: { it: "Glutine, Lattosio, Pesce", en: "Gluten, Dairy, Fish" },
-    image: "https://images.unsplash.com/photo-1511688878353-3a2f5be94cd7?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 8,
-    category: "pizze-gourmet",
-    title: {
-      it: "Porchetta & Patate al Forno",
-      en: "Porchetta & Roast Potatoes"
-    },
-    desc: {
-      it: "Porchetta croccante, patate al forno e Provola filante. Il comfort food per eccellenza, impreziosito dal tocco aromatico della maionese al rosmarino fresco. Irresistibile.",
-      en: "Crispy roast porchetta, tender roasted potatoes, melted smoked provola and fresh rosemary-infused mayo. The ultimate Italian comfort food."
-    },
-    priceVal: 13.00,
-    priceStr: "€ 13.00",
-    badge: { it: "Comfort Food", en: "Comfort Food" },
-    allergens: { it: "Glutine, Lattosio, Uova", en: "Gluten, Dairy, Eggs" },
-    image: "https://images.unsplash.com/photo-1544982503-9f984c14501a?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 9,
-    category: "pizze-gourmet",
-    title: {
-      it: "Luna Rossa (Salsiccia & Finocchietto)",
-      en: "Luna Rossa (Sausage & Wild Fennel)"
-    },
-    desc: {
-      it: "La tradizione incontra l'aroma: Mozzarella fior di latte, Salsiccia e Patate al Forno, reso unico dall'aggiunta della nostra Purea artigianale di Finocchietto selvatico. Ricca, saporita e incredibilmente profumata.",
-      en: "Fior di latte mozzarella, savory Italian sausage and roasted potatoes, crowned with our house-made wild fennel puree. Distinctive and fragrant."
-    },
-    priceVal: 12.00,
-    priceStr: "€ 12.00",
-    badge: { it: "Purea Finocchietto", en: "Wild Fennel Puree" },
-    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
-    image: "https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 10,
-    category: "pizze-gourmet",
-    title: {
-      it: "Sapori D'Autunno (Zucca & Porcini)",
-      en: "Autumn Flavors (Pumpkin & Porcini)"
-    },
-    desc: {
-      it: "Crema di zucca artigianale, Speck Alto Adige, Funghi Porcini trifolati e Provola Affumicata. La pizza che profuma di camino e bosco: calda, ricca e irresistibile.",
-      en: "Artisanal pumpkin cream, Alto Adige smoked speck, sautéed porcini mushrooms and melted smoked provola. Warm, comforting forest flavors."
-    },
-    priceVal: 13.00,
-    priceStr: "€ 13.00",
-    badge: { it: "Zucca & Porcini", en: "Pumpkin & Porcini" },
-    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
-    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80"
-  },
-
-  // --- PIZZE CLASSICHE & TRADIZIONALI KALÒ ---
-  {
-    id: 11,
-    category: "pizze-classiche",
-    title: {
-      it: "Margherita",
-      en: "Margherita"
-    },
-    desc: {
-      it: "La nostra interpretazione della regina: pomodoro San Marzano DOP, Mozzarella Fior di Latte, basilico fresco e Olio EVO. Sapore ineguagliabile e ingredienti di prima scelta.",
-      en: "Our interpretation of the queen: San Marzano DOP tomato sauce, Fior di Latte mozzarella, fresh basil and extra virgin olive oil. Pure classic flavor."
-    },
-    priceVal: 7.00,
-    priceStr: "€ 7.00",
-    badge: { it: "San Marzano DOP", en: "Classic DOP" },
-    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
-    image: "https://images.unsplash.com/photo-1604382355076-af4b0eb60143?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 12,
-    category: "pizze-classiche",
-    title: {
-      it: "Verace Napoletana D.O.P.",
-      en: "Verace Napoletana D.O.P."
-    },
-    desc: {
-      it: "La vera essenza della tradizione: impasto a lunghissima maturazione, Pomodoro San Marzano D.O.P., Mozzarella di Bufala Campana D.O.P., Basilico fresco e Olio EVO. La pizza riconosciuta a livello mondiale.",
-      en: "The true essence of Neapolitan heritage: long-aged dough, San Marzano D.O.P. tomatoes, fresh Buffalo Mozzarella Campana D.O.P., basil and EVOO."
-    },
-    priceVal: 9.00,
-    priceStr: "€ 9.00",
-    badge: { it: "Bufala Campana DOP", en: "Buffalo DOP" },
-    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
-    image: "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 13,
-    category: "pizze-classiche",
-    title: {
-      it: "Marinara",
-      en: "Marinara"
-    },
-    desc: {
-      it: "La vera essenza della pizza, senza mozzarella. Pomodoro fresco, Aglio, Origano a richiesta e abbondante Olio EVO. Sapore intenso e altissima digeribilità. (Ideale anche per chi è intollerante al lattosio!)",
-      en: "The pure essence of pizza, cheese-free. Fresh tomato sauce, sweet garlic, wild oregano and abundant EVOO. Highly digestible and naturally lactose-free."
-    },
-    priceVal: 6.00,
-    priceStr: "€ 6.00",
-    badge: { it: "Senza Lattosio", en: "Lactose-Free" },
-    allergens: { it: "Glutine", en: "Gluten" },
-    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 14,
-    category: "pizze-classiche",
-    title: {
-      it: "Provola E Pepe",
-      en: "Smoked Provola & Black Pepper"
-    },
-    desc: {
-      it: "Pomodoro San Marzano, bufala affumicata di Paestum, pepe nero, basilico, olio EVO. L'affumicatura naturale della provola, sciolta perfettamente, crea una tela ricca e saporita con una nota decisa e persistente.",
-      en: "San Marzano tomatoes, naturally smoked Paestum buffalo mozzarella, freshly ground black pepper, basil and EVOO. Bold, smoky and deeply savory."
-    },
-    priceVal: 12.00,
-    priceStr: "€ 12.00",
-    badge: { it: "Bufala di Paestum", en: "Smoked Paestum" },
-    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
-    image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 15,
-    category: "pizze-classiche",
-    title: {
-      it: "Norma Siciliana",
-      en: "Sicilian Norma"
-    },
-    desc: {
-      it: "La nostra pizza ispirata al celebre piatto siciliano: base con pomodoro e mozzarella, arricchita dopo cottura con cubetti di melanzane fritte croccanti, Ricotta al forno o Ricotta Salata grattugiata e Basilico fresco. Sapore pieno e indimenticabile.",
-      en: "Homage to the iconic Sicilian classic: tomato and mozzarella base, topped with crispy fried eggplant cubes, baked salted ricotta and aromatic basil."
-    },
-    priceVal: 9.00,
-    priceStr: "€ 9.00",
-    badge: { it: "Icona Siciliana", en: "Sicilian Icon" },
-    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
-    image: "https://images.unsplash.com/photo-1590947132387-155cc02f3212?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 16,
-    category: "pizze-classiche",
-    title: {
-      it: "Caprese Fresca",
-      en: "Fresh Caprese"
-    },
-    desc: {
-      it: "La pizza estiva per eccellenza: mozzarella di bufala campana, pomodorini rossi e datterini gialli dolci, basilico fresco e Olio EVO a crudo.",
-      en: "The quintessential summer pizza: fresh buffalo mozzarella, vibrant red and yellow cherry tomatoes, fresh basil and extra virgin olive oil."
-    },
-    priceVal: 9.00,
-    priceStr: "€ 9.00",
-    badge: { it: "Fresca & Leggera", en: "Fresh & Crisp" },
-    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
-    image: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 17,
-    category: "pizze-classiche",
-    title: {
-      it: "Diavola (Ventricina Abruzzese)",
-      en: "Diavola (Spicy Ventricina)"
-    },
-    desc: {
-      it: "Non chiamatela solo Diavola. Chiamatela tentazione. La combinazione perfetta di salame piccante e fior di latte che risveglia i sensi. Pomodoro San Marzano D.O.P., fior di latte, salame ventricina abruzzese piccante al punto giusto, olio EVO e basilico.",
-      en: "San Marzano D.O.P. tomato, fior di latte mozzarella, artisanal Abruzzese ventricina spicy salami, extra virgin olive oil and fresh basil."
-    },
-    priceVal: 8.50,
-    priceStr: "€ 8.50",
-    badge: { it: "Ventricina Piccante", en: "Spicy Ventricina" },
-    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
-    image: "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 18,
-    category: "pizze-classiche",
-    title: {
-      it: "Capricciosa Rivisitata",
-      en: "Artisanal Capricciosa"
-    },
-    desc: {
-      it: "Pomodoro San Marzano D.O.P., Fior di Latte, Prosciutto Cotto di qualità e Funghi freschi. Il tocco di classe sono i Carciofi Grigliati che offrono una nota affumicata, bilanciata dall'Uovo e dal Basilico fresco. Qualità e tradizione.",
-      en: "San Marzano D.O.P., fior di latte, high quality ham, fresh mushrooms, fire-grilled artichokes with smoky depth, boiled egg and fresh basil."
-    },
-    priceVal: 10.00,
-    priceStr: "€ 10.00",
-    badge: { it: "Carciofi alla Brace", en: "Grilled Artichokes" },
-    allergens: { it: "Glutine, Lattosio, Uova", en: "Gluten, Dairy, Eggs" },
-    image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 19,
-    category: "pizze-classiche",
-    title: {
-      it: "Parmigiana di Melanzane",
-      en: "Eggplant Parmigiana"
-    },
-    desc: {
-      it: "Pomodoro San Marzano D.O.P., mozzarella fior di latte, melanzane a funghetto fritte alla perfezione, prosciutto cotto, scaglie di Parmigiano Reggiano, olio EVO e basilico. Un'esplosione di sapore che ricorda i pranzi della domenica.",
-      en: "San Marzano tomato, fior di latte, fried eggplant cubes, cooked ham, shaved Parmigiano Reggiano, EVOO and fresh basil."
-    },
-    priceVal: 10.00,
-    priceStr: "€ 10.00",
-    badge: { it: "Melanzane & Grana", en: "Classic Sunday" },
-    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
-    image: "https://images.unsplash.com/photo-1576458088443-04a19bb13da6?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 20,
-    category: "pizze-classiche",
-    title: {
-      it: "La Tonnata (Sapore di Mare)",
-      en: "Tonnata (Mediterranean Tuna)"
-    },
-    desc: {
-      it: "Mozzarella Fior di Latte, Filetti di Tonno sott'olio selezionato, Olive Taggiasche, Cipolla Rossa di Tropea, Capperi e Pomodorini rossi. La dolcezza della cipolla si fonde con la sapidità del tonno e la freschezza dei pomodorini.",
-      en: "Fior di latte, select tuna fillets, Taggiasca olives, Tropea red onion, capers and sweet cherry tomatoes. Vibrant, maritime and fresh."
-    },
-    priceVal: 9.00,
-    priceStr: "€ 9.00",
-    badge: { it: "Filetti di Tonno", en: "Premium Tuna" },
-    allergens: { it: "Glutine, Lattosio, Pesce", en: "Gluten, Dairy, Fish" },
-    image: "https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 21,
-    category: "pizze-classiche",
-    title: {
-      it: "Salsiccia e Friarielli (La Vera Napoli)",
-      en: "Sausage & Friarielli (Naples Classic)"
-    },
-    desc: {
-      it: "Mozzarella Fior di Latte, Salsiccia di maiale sbriciolata, Friarielli (cime di rapa) saltati in padella all'aglio e Olio EVO. Il sapore amarognolo e deciso dei friarielli si sposa perfettamente con la sapidità della salsiccia. Fedele alla ricetta popolare.",
-      en: "Fior di latte, pork sausage, Neapolitan friarielli turnip greens sautéed in garlic and EVOO. The timeless Naples favorite."
-    },
-    priceVal: 10.00,
-    priceStr: "€ 10.00",
-    badge: { it: "La Vera Napoli", en: "Naples Heritage" },
-    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
-    image: "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 22,
-    category: "pizze-classiche",
-    title: {
-      it: "Americana (Wurstel & Patatine)",
-      en: "Americana (Wurstel & Fries)"
-    },
-    desc: {
-      it: "Salsa di pomodoro, Mozzarella fior di latte, Wurstel di qualità selezionati e le nostre patatine fritte dorate e croccanti, con tocco di Olio EVO e Basilico a crudo. Semplice ma irresistibile per grandi e piccoli.",
-      en: "Tomato sauce, mozzarella, selected pork wurstel and crispy golden french fries with extra virgin olive oil."
-    },
-    priceVal: 8.50,
-    priceStr: "€ 8.50",
-    badge: { it: "Molto Richiesta", en: "Popular Choice" },
-    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
-    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80"
-  },
-
-  // --- STUZZICHERIE & FRITTI ---
-  {
-    id: 23,
-    category: "sfizi-fritti",
-    title: {
-      it: "Tris di Montanarine Napoletane Fritte",
-      en: "Trio of Fried Neapolitan Montanarine"
-    },
-    desc: {
-      it: "Tre pizzette fritte soffici: 1) Pomodoro cotto e ricotta salata siciliana; 2) Mortadella e pesto di pistacchio; 3) Stracciatella e alici di Cetara.",
-      en: "Three airy fried mini-pizzas: 1) Slow tomato sauce & salted ricotta; 2) Mortadella & pistachio pesto; 3) Stracciatella & Cetara anchovies."
-    },
-    priceVal: 9.00,
-    priceStr: "€ 9.00",
-    badge: { it: "Imperdibile", en: "Must Try" },
-    allergens: { it: "Glutine, Lattosio, Pesce, Frutta a guscio", en: "Gluten, Dairy, Fish, Tree Nuts" },
-    image: "https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 24,
-    category: "sfizi-fritti",
-    title: {
-      it: "Arancinetti Gourmet dello Stretto (4 pz)",
-      en: "Gourmet Sicilian Mini Arancini (4 pcs)"
-    },
-    desc: {
-      it: "Degustazione di arancini artigianali dorati: 2 con ragù tradizionale di vitello e piselli, 2 con pistacchio di Bronte e provola affumicata dei Nebrodi.",
-      en: "Crispy hand-rolled arancini: 2 with traditional beef ragù and peas, 2 with rich Bronte pistachio cream and smoked Nebrodi provola."
+      it: "Melanzane fritte a cubetti dorati, sedano, cipolla stufata, olive verdi in salamoia, capperi di Salina e la tipica glassatura agrodolce della tradizione, completata con scaglie di mandorle tostate.",
+      en: "Golden fried eggplants, celery, stewed onion, green olives, Salina capers in sweet-and-sour glaze topped with toasted Sicilian almonds."
     },
     priceVal: 7.50,
     priceStr: "€ 7.50",
-    badge: { it: "Fatto a Mano", en: "Handcrafted" },
-    allergens: { it: "Glutine, Lattosio, Frutta a guscio", en: "Gluten, Dairy, Tree Nuts" },
-    image: "https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=800&q=80"
+    badge: { it: "Ricetta di Casa", en: "Homestyle" },
+    allergens: { it: "Sedano, Frutta a guscio", en: "Celery, Tree Nuts" },
+    image: "https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=800&q=80"
   },
   {
-    id: 25,
-    category: "sfizi-fritti",
+    id: 5,
+    category: "antipasti",
+    diet: ["pesce"],
     title: {
-      it: "Frittatina di Pasta alla Sorrentina",
-      en: "Sorrento Crispy Pasta Frittatina"
+      it: "Carpaccio di Spada agli Agrumi dello Stretto",
+      en: "Citrus Cured Swordfish Carpaccio"
     },
     desc: {
-      it: "Bucatini trafilati al bronzo mantecati con besciamella profumata alla noce moscata, provola dolce filante, guanciale croccante e panatura dorata.",
-      en: "Bronze-die bucatini wrapped in silky nutmeg béchamel, stringy smoked provola cheese and crispy cured pork cheek in a golden crunch crust."
+      it: "Sottilissime lamelle di pescespada fresco dello Stretto marinate a freddo con succo d'arancia, limone di Sicilia, bacche di pepe rosa e fili d'erba cipollina fresca.",
+      en: "Thin slices of fresh Strait swordfish cold-marinated in orange and lemon juices, pink peppercorns and garden chives."
     },
-    priceVal: 6.50,
-    priceStr: "€ 6.50",
-    badge: { it: "Street Food D.O.C.", en: "Authentic Street Food" },
-    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
+    priceVal: 13.00,
+    priceStr: "€ 13.00",
+    badge: { it: "Pesce Spada Locale", en: "Local Catch" },
+    allergens: { it: "Pesce", en: "Fish" },
     image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
   },
-
-  // --- LOUNGE & COCKTAILS ---
   {
-    id: 26,
-    category: "lounge-cocktails",
+    id: 6,
+    category: "antipasti",
+    diet: ["carne", "tradizionale"],
     title: {
-      it: "Kalò Smoked Negroni",
-      en: "Kalò Smoked Negroni"
+      it: "Tagliere dei Monti Nebrodi",
+      en: "Nebrodi Mountains Artisanal Board"
     },
     desc: {
-      it: "Gin siciliano all'arancia rossa IGP, Campari infuso con rosmarino dell'Etna, Vermouth rosso piemontese, affumicatura espressa con trucioli d'ulivo.",
-      en: "Sicilian blood orange gin, Campari infused with Etna rosemary, red Vermouth, served with olive wood table smoke."
+      it: "Selezione di salumi e formaggi del territorio: Salame di Suino Nero dei Nebrodi, Provola dolce dei Nebrodi, Pecorino Primo Sale pepato e olive cunzate nostrane con confettura di fichi.",
+      en: "Selection of artisanal cold cuts and cheeses: Black Swine salami from Nebrodi, aged provola, pecorino cheese and spiced Sicilian olives."
     },
-    priceVal: 10.00,
-    priceStr: "€ 10.00",
-    badge: { it: "Signature Mixology", en: "Signature Cocktail" },
-    allergens: { it: "Alcol 22% Vol.", en: "Alcohol 22% Vol." },
+    priceVal: 12.00,
+    priceStr: "€ 12.00",
+    badge: { it: "Suino Nero", en: "Nebrodi DOP" },
+    allergens: { it: "Lattosio", en: "Dairy" },
+    image: "https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=800&q=80"
+  },
+
+  // --- I PRIMI PIATTI TRADIZIONALI ---
+  {
+    id: 7,
+    category: "primi",
+    diet: ["pesce", "tradizionale"],
+    title: {
+      it: "Calamarata Pescespada e Melanzane",
+      en: "Calamarata with Swordfish & Eggplants"
+    },
+    desc: {
+      it: "Pasta trafilata al bronzo avvolta da tocchetti di pescespada fresco dello Stretto, cubetti di melanzana dorata fritta, pomodorini ciliegini dolci e una cascata di mentuccia selvatica fresca.",
+      en: "Bronze-die Calamarata pasta with fresh Strait swordfish chunks, golden fried eggplant, sweet cherry tomatoes and fresh garden mint."
+    },
+    priceVal: 13.50,
+    priceStr: "€ 13.50",
+    badge: { it: "Il Più Amato", en: "Most Loved" },
+    allergens: { it: "Glutine, Pesce", en: "Gluten, Fish" },
+    image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 8,
+    category: "primi",
+    diet: ["pesce", "tradizionale"],
+    title: {
+      it: "Spaghetti alla Ghiotta di Stocco",
+      en: "Spaghetti with Stocco alla Ghiotta Sauce"
+    },
+    desc: {
+      it: "Il leggendario sugo messinese dello stocco incontra gli spaghetti: sugo denso e ricco di pomodoro, capperi di Salina, olive verdi e patate sfatte che donano cremosità senza eguali.",
+      en: "The historic Messinese ghiotta sauce hugging bronze spaghetti: rich tomato reduction with stockfish juices, Salina capers, green olives and melted potatoes."
+    },
+    priceVal: 14.00,
+    priceStr: "€ 14.00",
+    badge: { it: "Pura Tradizione", en: "Pure Tradition" },
+    allergens: { it: "Glutine, Pesce, Sedano", en: "Gluten, Fish, Celery" },
+    image: "https://images.unsplash.com/photo-1546549032-9571cd6b27df?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 9,
+    category: "primi",
+    diet: ["pesce"],
+    title: {
+      it: "Spaghetti alle Vongole Veraci e Bottarga",
+      en: "Spaghetti with Clams & Tuna Bottarga"
+    },
+    desc: {
+      it: "Vongole veraci aperte all'istante con olio extravergine, aglio in camicia e gambi di prezzemolo, sfumate con vino bianco Grillo e completate con grattugiata generosa di bottarga di tonno rosso.",
+      en: "Fresh clams gently opened with olive oil, garlic and white wine, finished with freshly grated red tuna bottarga for an intense marine aroma."
+    },
+    priceVal: 15.00,
+    priceStr: "€ 15.00",
+    badge: { it: "Bottarga di Tonno", en: "Tuna Bottarga" },
+    allergens: { it: "Glutine, Molluschi, Pesce", en: "Gluten, Molluscs, Fish" },
+    image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 10,
+    category: "primi",
+    diet: ["pesce", "tradizionale"],
+    title: {
+      it: "Caserecce con le Sarde e Finocchietto",
+      en: "Caserecce with Sardines & Wild Fennel"
+    },
+    desc: {
+      it: "Sarde freschissime pulite a mano, finocchietto selvatico dei monti peloritani, pinoli, uvetta passolina, zafferano naturale e rifinite con mollica atturrata croccante e dorata.",
+      en: "Hand-cleaned fresh sardines, wild Peloritani mountain fennel, pine nuts, currants, saffron and crowned with crispy toasted breadcrumbs."
+    },
+    priceVal: 12.50,
+    priceStr: "€ 12.50",
+    badge: { it: "Finocchietto Nostrano", en: "Wild Fennel" },
+    allergens: { it: "Glutine, Pesce, Frutta a guscio", en: "Gluten, Fish, Tree Nuts" },
+    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 11,
+    category: "primi",
+    diet: ["tradizionale"],
+    title: {
+      it: "Gnocchetti di Patate alla Norma di Casa",
+      en: "Homestyle Gnocchi alla Norma"
+    },
+    desc: {
+      it: "Gnocchetti freschi di patate conditi con sugo lento di pomodoro San Marzano, melanzane nostrane fritte al momento, basilico fresco e abbondante ricotta salata siciliana a scaglie.",
+      en: "Fresh potato gnocchi with slow-cooked San Marzano tomato sauce, freshly fried eggplant, fresh basil and abundant aged salted ricotta cheese."
+    },
+    priceVal: 11.00,
+    priceStr: "€ 11.00",
+    badge: { it: "Ricotta Salata DOP", en: "Salted Ricotta" },
+    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
+    image: "https://images.unsplash.com/photo-1588013273468-315fd88ea34c?auto=format&fit=crop&w=800&q=80"
+  },
+
+  // --- SECONDI DI PESCE & CARNI ---
+  {
+    id: 12,
+    category: "secondi",
+    diet: ["pesce", "tradizionale"],
+    title: {
+      it: "Pesce Stocco alla Ghiotta Messinese",
+      en: "Traditional Messinese Stocco alla Ghiotta"
+    },
+    desc: {
+      it: "Il re indiscusso della tavola messinese: tranci selezionati di stoccafisso cotti lentamente per ore in terracotta con patate dolci, pomodoro corposo, cipolle stufate, capperi di Salina, olive verdi e bianche, sedano ed abbondante Olio EVO. Sapore ineguagliabile.",
+      en: "The historic symbol of Messina: prime stockfish simmered for hours in clay pots with potatoes, rich tomato, stewed onion, Salina capers, green and white olives, celery and rich olive oil."
+    },
+    priceVal: 16.00,
+    priceStr: "€ 16.00",
+    badge: { it: "Piatto Simbolo", en: "Signature Dish" },
+    allergens: { it: "Pesce, Sedano", en: "Fish, Celery" },
+    image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 13,
+    category: "secondi",
+    diet: ["pesce", "tradizionale"],
+    title: {
+      it: "Involtini di Pescespada dello Stretto alla Brace",
+      en: "Grilled Swordfish Rolls with Bay Leaf"
+    },
+    desc: {
+      it: "Fettine sottilissime di pescespada freschissimo farcite con mollica condita agli aromi, caciocavallo filante, capperi e prezzemolo, infilzate nello spiedo con foglie di alloro e dorate sulla brace.",
+      en: "Thin slices of fresh swordfish stuffed with seasoned breadcrumbs, melted caciocavallo cheese, capers and parsley, grilled on skewers with aromatic bay leaves."
+    },
+    priceVal: 15.00,
+    priceStr: "€ 15.00",
+    badge: { it: "Cottura alla Brace", en: "Charcoal Grilled" },
+    allergens: { it: "Pesce, Glutine, Lattosio", en: "Fish, Gluten, Dairy" },
+    image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 14,
+    category: "secondi",
+    diet: ["pesce"],
+    title: {
+      it: "Involtini di Spatola in Crosta di Pistacchio",
+      en: "Silver Scabbardfish in Pistachio Crust"
+    },
+    desc: {
+      it: "Filetti del prelibato pesce sciabola locale dello Stretto, arrotolati con cuore morbido di panure aromatica e gratinati al forno con croccante granella di pistacchio di Bronte DOP.",
+      en: "Delicate Strait silver scabbardfish fillets rolled with herb filling and baked with a crunchy Bronte DOP pistachio crust."
+    },
+    priceVal: 14.00,
+    priceStr: "€ 14.00",
+    badge: { it: "Pistacchio di Bronte", en: "Bronte Pistachio" },
+    allergens: { it: "Pesce, Glutine, Frutta a guscio", en: "Fish, Gluten, Tree Nuts" },
+    image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 15,
+    category: "secondi",
+    diet: ["pesce"],
+    title: {
+      it: "Frittura Mista di Paranza e Calamari",
+      en: "Crispy Strait Mixed Fried Seafood"
+    },
+    desc: {
+      it: "Calamaretti teneri, gamberi di nassa e pesciolini freschi dello Stretto infarinati e fritti all'istante in olio bollente. Servita croccante, asciutta e accompagnata da spicchi di limone.",
+      en: "Tender calamari, gulf prawns and small local fish lightly dusted in flour and flash-fried to golden crunchiness. Served with fresh lemon wedges."
+    },
+    priceVal: 15.00,
+    priceStr: "€ 15.00",
+    badge: { it: "Croccante & Asciutta", en: "Golden Crisp" },
+    allergens: { it: "Pesce, Molluschi, Crostacei, Glutine", en: "Fish, Molluscs, Crustaceans, Gluten" },
+    image: "https://images.unsplash.com/photo-1579631542720-3a87824fff86?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 16,
+    category: "secondi",
+    diet: ["carne", "tradizionale"],
+    title: {
+      it: "Braciole Messinesi di Vitello alla Brace",
+      en: "Traditional Messinese Veal Braciole"
+    },
+    desc: {
+      it: "Il grande classico messinese di carne: involtini di carpaccio di vitello farciti con pangrattato aromatizzato, aglio, prezzemolo e provola dei Nebrodi filante, cotti alla griglia con foglie di alloro.",
+      en: "Messina's iconic meat specialty: tender veal rolls stuffed with seasoned breadcrumbs, Nebrodi provola cheese and fresh parsley, grilled over open coals with bay leaves."
+    },
+    priceVal: 13.00,
+    priceStr: "€ 13.00",
+    badge: { it: "Carne ai Carboni", en: "Flame Grilled" },
+    allergens: { it: "Glutine, Lattosio", en: "Gluten, Dairy" },
+    image: "https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=800&q=80"
+  },
+
+  // --- I DOLCI CASERECCI ---
+  {
+    id: 17,
+    category: "dolci",
+    diet: ["dolci", "tradizionale"],
+    title: {
+      it: "Biancomangiare alle Mandorle di Avola",
+      en: "Avola Almond Biancomangiare Pudding"
+    },
+    desc: {
+      it: "Antichissimo dessert siciliano preparato con latte di mandorle artigianale, un tocco di cannella e servito con una vellutata coulis di more di rovo e lamponi freschi.",
+      en: "Ancient delicate Sicilian dessert crafted with handmade almond milk, scented with cinnamon and served with fresh blackberry coulis."
+    },
+    priceVal: 5.00,
+    priceStr: "€ 5.00",
+    badge: { it: "Della Tradizione", en: "Ancient Recipe" },
+    allergens: { it: "Frutta a guscio", en: "Tree Nuts" },
+    image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 18,
+    category: "dolci",
+    diet: ["dolci", "tradizionale"],
+    title: {
+      it: "Cannolo Tradizionale Scomposto con Ricotta Fresca",
+      en: "Deconstructed Cannolo with Sheep Ricotta"
+    },
+    desc: {
+      it: "Cialda fritta artigianale croccante al cacao e vino rosso, crema setosa di pura ricotta di pecora lavorata con gocce di cioccolato modicano e finitura con pistacchio tostato.",
+      en: "Crisp artisanal cocoa waffle shell with sweet fresh sheep ricotta cream, Modica dark chocolate drops and crushed pistachios."
+    },
+    priceVal: 5.00,
+    priceStr: "€ 5.00",
+    badge: { it: "Ricotta Freschissima", en: "Fresh Ricotta" },
+    allergens: { it: "Glutine, Lattosio, Frutta a guscio", en: "Gluten, Dairy, Tree Nuts" },
     image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80"
   },
   {
-    id: 27,
-    category: "lounge-cocktails",
+    id: 19,
+    category: "dolci",
+    diet: ["dolci"],
     title: {
-      it: "Naxos Sunset Spritz",
-      en: "Naxos Sunset Spritz"
+      it: "Tiramisù Casalingo della Trattoria di Lilla",
+      en: "Lilla's Homestyle Tiramisù"
     },
     desc: {
-      it: "Aperol, Italicus rosolio di bergamotto, Prosecco Superiore di Valdobbiadene DOCG, splash di soda agli agrumi di Sicilia, mentuccia e arancia essiccata.",
-      en: "Aperol, Italicus bergamot liqueur, Valdobbiadene DOCG Prosecco, splash of Sicilian citrus soda, fresh mint and dehydrated orange slice."
+      it: "Preparato espresso ogni mattina: savoiardi inzuppati nel caffè espresso moka, crema al mascarpone montata a mano soffice come una nuvola e spolverata generosa di cacao amaro.",
+      en: "Prepared freshly every morning: ladyfingers soaked in moka espresso, airy whipped mascarpone cream and Dutch bitter cocoa powder."
     },
-    priceVal: 8.50,
-    priceStr: "€ 8.50",
-    badge: { it: "Aperitivo Iconico", en: "Iconic Aperitivo" },
-    allergens: { it: "Alcol 11% Vol.", en: "Alcohol 11% Vol." },
-    image: "https://images.unsplash.com/photo-1560512823-829485b8bf24?auto=format&fit=crop&w=800&q=80"
+    priceVal: 5.50,
+    priceStr: "€ 5.50",
+    badge: { it: "Fatto a Mano", en: "Handmade" },
+    allergens: { it: "Glutine, Lattosio, Uova", en: "Gluten, Dairy, Eggs" },
+    image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=80"
   },
   {
-    id: 28,
-    category: "lounge-cocktails",
+    id: 20,
+    category: "dolci",
+    diet: ["dolci", "tradizionale"],
     title: {
-      it: "Etna Mule Rinfrescante",
-      en: "Mount Etna Refreshing Mule"
+      it: "Parfait di Mandorle con Cioccolato Caldo",
+      en: "Almond Parfait with Warm Dark Chocolate"
     },
     desc: {
-      it: "Vodka premium, succo di lime fresco spremuto, ginger beer speziata artigianale e cordiale al fico d'India siciliano con rametto di menta fresca.",
-      en: "Premium vodka, fresh pressed lime juice, artisanal spicy ginger beer and Sicilian prickly pear cordial garnished with fresh mint."
-    },
-    priceVal: 9.50,
-    priceStr: "€ 9.50",
-    badge: { it: "Fresco & Aromatico", en: "Crisp & Fresh" },
-    allergens: { it: "Alcol 14% Vol.", en: "Alcohol 14% Vol." },
-    image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 29,
-    category: "lounge-cocktails",
-    title: {
-      it: "Birra Artigianale dello Stretto alla Spina (0.40L)",
-      en: "Artisanal Craft Beer on Tap (0.40L)"
-    },
-    desc: {
-      it: "Bionda non pastorizzata né filtrata prodotta in Sicilia, con profumo delicato di malto d'orzo, luppoli nobili e note floreali.",
-      en: "Unfiltered, unpasteurized Sicilian craft lager, delicate aromas of selected barley malts, noble hops and refreshing floral finish."
+      it: "Semifreddo artigianale alle mandorle tostate e pralinate nel caramello, servito al tavolo con una colata fumante di cioccolato fondente 70%.",
+      en: "Velvety almond semifreddo with caramelized toasted almonds, drenched at the table in warm 70% dark chocolate."
     },
     priceVal: 6.00,
     priceStr: "€ 6.00",
-    badge: { it: "Artigianale Locale", en: "Local Craft" },
-    allergens: { it: "Glutine, Alcol 5.2% Vol.", en: "Gluten, Alcohol 5.2% Vol." },
-    image: "https://images.unsplash.com/photo-1535958636474-b021ee887b13?auto=format&fit=crop&w=800&q=80"
+    badge: { it: "Goloso", en: "Decadent" },
+    allergens: { it: "Lattosio, Frutta a guscio, Uova", en: "Dairy, Tree Nuts, Eggs" },
+    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80"
   },
 
-  // --- DESSERT ARTIGIANALI ---
+  // --- CANTINA & BEVANDE ---
   {
-    id: 30,
-    category: "dessert",
+    id: 21,
+    category: "bevande",
+    diet: ["pesce"],
     title: {
-      it: "Cannolo Scomposto con Ricotta dei Nebrodi",
-      en: "Deconstructed Cannolo with Nebrodi Ricotta"
+      it: "Grillo di Sicilia D.O.C. (Bottiglia 75cl)",
+      en: "Grillo di Sicilia D.O.C. (75cl Bottle)"
     },
     desc: {
-      it: "Cialda fritta artigianale allo strutto spezzettata, mousse vellutata di pura ricotta dolce di pecora, perle di cioccolato di Modica IGP e pistacchio di Bronte.",
-      en: "Crispy artisan cannolo waffle pieces layered with sweet sheep's milk ricotta mousse, Modica chocolate pearls and toasted Bronte pistachios."
+      it: "Vino bianco autoctono siciliano, fresco, minerale e sapido, con sentori di fiori d'arancio, pompelmo giallo e note saline dello Ionio. Ideale compagno per lo stocco e i primi di pesce.",
+      en: "Native Sicilian white wine, crisp, mineral and savory with notes of orange blossom and citrus. Ideal companion for seafood and ghiotta."
     },
-    priceVal: 6.00,
-    priceStr: "€ 6.00",
-    badge: { it: "Fatto al Momento", en: "Freshly Made" },
-    allergens: { it: "Glutine, Lattosio, Frutta a guscio", en: "Gluten, Dairy, Tree Nuts" },
-    image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80"
+    priceVal: 18.00,
+    priceStr: "€ 18.00",
+    badge: { it: "Selezione Trattoria", en: "House Selection" },
+    allergens: { it: "Solfiti", en: "Sulfites" },
+    image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80"
   },
   {
-    id: 31,
-    category: "dessert",
+    id: 22,
+    category: "bevande",
+    diet: ["tradizionale"],
     title: {
-      it: "Babà al Rum Invecchiato & Crema Pasticcera",
-      en: "Aged Rum Babà with Pastry Cream"
+      it: "Nero d'Avola D.O.C. dei Nebrodi (Bottiglia 75cl)",
+      en: "Nero d'Avola D.O.C. (75cl Bottle)"
     },
     desc: {
-      it: "Lievitato soffice secondo la ricetta partenopea, imbevuto di rum ambrato caraibico invecchiato, ciuffo di crema chantilly e amarena Fabbri.",
-      en: "Traditional Neapolitan sponge soaked in aged Caribbean amber rum, topped with delicate chantilly cream and glazed wild black cherry."
+      it: "Rosso rubino intenso, bouquet profondo di marasca, ciliegia matura, carruba e spezie mediterranee. Tannino morbido e avvolgente, perfetto per le braciole e i piatti saporiti di carne.",
+      en: "Ruby red, rich bouquet of wild cherries, carob and Mediterranean spices. Velvety tannins, perfect for meat braciole and hearty dishes."
     },
-    priceVal: 6.50,
-    priceStr: "€ 6.50",
-    badge: { it: "Tradizione Pura", en: "Classic Neapolitan" },
-    allergens: { it: "Glutine, Lattosio, Uova, Alcol", en: "Gluten, Dairy, Eggs, Alcohol" },
-    image: "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 32,
-    category: "dessert",
-    title: {
-      it: "Tiramisù Morbido al Pistacchio di Bronte",
-      en: "Soft Pistachio Tiramisù"
-    },
-    desc: {
-      it: "Savoiardi sardi bagnati al caffè espresso arabica, soffice crema al mascarpone montata a freddo e cascata di crema spalmabile al pistacchio.",
-      en: "Sardinian ladyfingers dipped in rich espresso, fluffy fresh mascarpone cream and warm decadent Bronte pistachio drizzle."
-    },
-    priceVal: 6.50,
-    priceStr: "€ 6.50",
-    badge: { it: "Il Più Amato", en: "Guest Favorite" },
-    allergens: { it: "Glutine, Lattosio, Uova, Frutta a guscio", en: "Gluten, Dairy, Eggs, Tree Nuts" },
-    image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=80"
+    priceVal: 20.00,
+    priceStr: "€ 20.00",
+    badge: { it: "Corposo & Nobile", en: "Full Bodied" },
+    allergens: { it: "Solfiti", en: "Sulfites" },
+    image: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=800&q=80"
   }
 ];
 
 // App State
-let currentLang = 'it';
-let activeCategory = 'all';
-let currentTable = 'Tavolo 08';
-const cart = {}; // dishId: quantity
+let currentLang = "it";
+let activeCategory = "all";
+let searchQuery = "";
+let selectedTable = "Tavolo 1";
+const cart = {}; // id -> count
 
-// DOM References
-const menuGrid = document.getElementById('menu-grid');
-const searchInput = document.getElementById('menu-search');
-const clearSearchBtn = document.getElementById('clear-search');
-const categoryBar = document.getElementById('category-bar');
-const catPills = document.querySelectorAll('.cat-pill');
-const tableChips = document.querySelectorAll('.table-chip');
+// DOM Elements
+const menuGrid = document.getElementById("menu-grid");
+const emptyState = document.getElementById("empty-state");
+const searchInput = document.getElementById("menu-search");
+const searchClearBtn = document.getElementById("search-clear-btn");
+const categoryTabs = document.getElementById("category-tabs");
 
-// Floating Order Bar & Tray
-const floatingBar = document.getElementById('floating-bar');
-const orderCountBadge = document.getElementById('order-count');
-const orderTotalPriceEl = document.getElementById('order-total-price');
-const openTrayBtn = document.getElementById('open-tray-btn');
-const trayModal = document.getElementById('tray-modal');
-const trayBackdrop = document.getElementById('tray-backdrop');
-const closeTrayBtn = document.getElementById('close-tray');
-const trayItemsList = document.getElementById('tray-items');
-const trayTotalVal = document.getElementById('tray-total-val');
-const sendTrayWaBtn = document.getElementById('send-tray-whatsapp');
-const trayCurrentTableEl = document.getElementById('tray-current-table');
-const mockupTableLabel = document.getElementById('mockup-table-label');
+// Floating Bar & Tray Sheet
+const floatingOrderBar = document.getElementById("floating-order-bar");
+const openTrayBtn = document.getElementById("open-tray-btn");
+const btnViewTray = document.getElementById("btn-view-tray");
+const trayModal = document.getElementById("tray-modal");
+const closeTrayBtn = document.getElementById("close-tray-btn");
+const closeTrayBackdrop = document.getElementById("close-tray-backdrop");
+const trayTableLabel = document.getElementById("tray-table-label");
+const trayItemsContainer = document.getElementById("tray-items-container");
+const modalTrayTotal = document.getElementById("modal-tray-total");
+const trayItemCount = document.getElementById("tray-item-count");
+const trayTotalPrice = document.getElementById("tray-total-price");
+const trayItemsSummary = document.getElementById("tray-items-summary");
+const btnSendWa = document.getElementById("btn-send-whatsapp-order");
 
-// QR Simulation Modal
-const qrDialog = document.getElementById('qr-dialog');
-const qrModalBtn = document.getElementById('qr-modal-btn');
-const dialogCloseBtn = document.getElementById('dialog-close');
-const btnTestQrStand = document.getElementById('btn-test-qr-stand');
+// QR Stand Simulator Elements
+const qrModal = document.getElementById("qr-modal");
+const qrModalBtn = document.getElementById("qr-modal-btn");
+const qrModalClose = document.getElementById("qr-modal-close");
+const qrModalBackdrop = document.getElementById("qr-modal-backdrop");
+const btnModalCloseAction = document.getElementById("btn-modal-close-action");
+const btnTestQrDemo = document.getElementById("btn-test-qr-demo");
+const dynamicTableQr = document.getElementById("dynamic-table-qr");
+const modalQrImage = document.getElementById("modal-qr-image");
+const standCurrentTable = document.getElementById("stand-current-table");
+const modalQrIndicator = document.getElementById("modal-qr-table-indicator");
 
-// Lightbox Modal
-const imgLightbox = document.getElementById('img-lightbox');
-const lightboxBackdrop = document.getElementById('lightbox-backdrop');
-const lightboxClose = document.getElementById('lightbox-close');
-const lightboxImg = document.getElementById('lightbox-img');
-const lightboxBadge = document.getElementById('lightbox-badge');
-const lightboxTitle = document.getElementById('lightbox-title');
-const lightboxDesc = document.getElementById('lightbox-desc');
-const lightboxPrice = document.getElementById('lightbox-price');
-const lightboxAddBtn = document.getElementById('lightbox-add-btn');
-let currentLightboxDishId = null;
+// Lightbox Elements
+const imgLightbox = document.getElementById("img-lightbox");
+const lightboxBackdrop = document.getElementById("lightbox-backdrop");
+const lightboxClose = document.getElementById("lightbox-close");
+const lightboxImg = document.getElementById("lightbox-img");
+const lightboxTitle = document.getElementById("lightbox-title");
+const lightboxPrice = document.getElementById("lightbox-price");
+const lightboxDesc = document.getElementById("lightbox-desc");
+const lightboxAllergens = document.getElementById("lightbox-allergens");
+const lightboxAddBtn = document.getElementById("lightbox-add-btn");
+let activeLightboxItemId = null;
 
-// Reservation Form
-const bookingForm = document.getElementById('booking-form');
+// Live Opening Hours Checking
+function updateLiveStatus() {
+  const now = new Date();
+  const day = now.getDay(); // 0 is Sunday, 1 is Monday
+  const hours = now.getHours();
+  const mins = now.getMinutes();
+  const currentDec = hours + (mins / 60);
 
-// Language Switch
-const langItBtn = document.getElementById('lang-it');
-const langEnBtn = document.getElementById('lang-en');
+  const announcementText = document.getElementById("announcement-text");
 
-// =========================================================================
-// RENDER MENU CARDS
-// =========================================================================
-function renderMenu() {
-  const searchTerm = searchInput.value.toLowerCase().trim();
-  menuGrid.innerHTML = '';
-
-  const filteredDishes = menuData.filter(dish => {
-    const matchesCategory = activeCategory === 'all' || dish.category === activeCategory;
-    const title = dish.title[currentLang].toLowerCase();
-    const desc = dish.desc[currentLang].toLowerCase();
-    const matchesSearch = title.includes(searchTerm) || desc.includes(searchTerm);
-    return matchesCategory && matchesSearch;
-  });
-
-  if (filteredDishes.length === 0) {
-    menuGrid.innerHTML = `
-      <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px; color: var(--text-muted);">
-        <p style="font-size: 1.2rem; margin-bottom: 8px;">Nessun piatto trovato per "<strong>${escapeHtml(searchTerm)}</strong>"</p>
-        <span style="font-size: 0.9rem; color: var(--text-dim);">Prova a cercare un altro ingrediente o seleziona una categoria sopra.</span>
-      </div>
-    `;
+  // Monday is day 1 (Closed)
+  if (day === 1) {
+    if (announcementText) {
+      announcementText.innerHTML = `🔒 <strong>Oggi Lunedì Chiuso per Riposo</strong> • Riapriamo Martedì a Pranzo dalle 12:30 • Trattoria ParadiSiculo`;
+    }
     return;
   }
 
-  filteredDishes.forEach(dish => {
-    const qty = cart[dish.id] || 0;
-    const card = document.createElement('div');
-    card.className = 'dish-card';
-    card.setAttribute('data-id', dish.id);
+  // Lunch: 12:30 - 15:30 (Tuesday - Sunday)
+  const isLunchOpen = currentDec >= 12.5 && currentDec <= 15.5;
+
+  // Dinner: 19:30 - 23:30 (Tuesday - Saturday)
+  const isDinnerOpen = (day !== 0) && (currentDec >= 19.5 && currentDec <= 23.5);
+
+  if (isLunchOpen) {
+    if (announcementText) {
+      announcementText.innerHTML = `🟢 <strong>Aperto Ora per Pranzo (12:30–15:30)</strong> • Pescato Fresco & Stocco alla Ghiotta • Via Ghibellina 154, Messina`;
+    }
+  } else if (isDinnerOpen) {
+    if (announcementText) {
+      announcementText.innerHTML = `🟢 <strong>Aperto Ora per Cena (19:30–23:30)</strong> • Cucina Tipica Messinese • Prenotazioni & Asporto via WhatsApp`;
+    }
+  } else {
+    let nextOpening = "Apre alle 12:30";
+    if (currentDec > 15.5 && currentDec < 19.5 && day !== 0) {
+      nextOpening = "Apre stasera alle 19:30";
+    }
+    if (announcementText) {
+      announcementText.innerHTML = `🕒 <strong>Trattoria ParadiSiculo</strong> • Pranzo 12:30–15:30 • Cena 19:30–23:30 (${nextOpening}) • Messina Centro`;
+    }
+  }
+}
+
+// Render Menu Cards
+function renderMenu() {
+  if (!menuGrid) return;
+  menuGrid.innerHTML = "";
+
+  const query = searchQuery.trim().toLowerCase();
+
+  const filtered = menuData.filter(item => {
+    // Category match
+    if (activeCategory !== "all" && item.category !== activeCategory) {
+      return false;
+    }
+
+    // Search query match
+    if (query) {
+      const title = item.title[currentLang].toLowerCase();
+      const desc = item.desc[currentLang].toLowerCase();
+      const badge = item.badge ? item.badge[currentLang].toLowerCase() : "";
+      if (!title.includes(query) && !desc.includes(query) && !badge.includes(query)) {
+        return false;
+      }
+    }
+
+    return true;
+  });
+
+  if (filtered.length === 0) {
+    if (emptyState) emptyState.style.display = "block";
+    return;
+  } else {
+    if (emptyState) emptyState.style.display = "none";
+  }
+
+  filtered.forEach(item => {
+    const card = document.createElement("article");
+    card.className = "dish-card";
+    card.setAttribute("data-id", item.id);
+
+    const countInCart = cart[item.id] || 0;
 
     card.innerHTML = `
-      <div class="dish-media" onclick="openLightbox(${dish.id})">
-        <img src="${dish.image}" alt="${dish.title[currentLang]}" class="dish-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80';">
-        <span class="dish-badge-pill">${dish.badge[currentLang]}</span>
-        <span class="dish-price-tag">${dish.priceStr}</span>
-        <div class="dish-zoom-hint" title="Ingrandisci foto">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-        </div>
+      <div class="dish-media" onclick="openLightbox(${item.id})">
+        <img src="${item.image}" alt="${item.title[currentLang]}" loading="lazy" class="dish-img" onerror="this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80'">
+        ${item.badge ? `<span class="dish-badge-pill">${item.badge[currentLang]}</span>` : ""}
+        <span class="dish-price-tag">${item.priceStr}</span>
+        <div class="dish-zoom-hint" title="Visualizza foto ingrandita">🔍</div>
       </div>
       <div class="dish-body">
         <div>
-          <h3 class="dish-title">${dish.title[currentLang]}</h3>
-          <p class="dish-description">${dish.desc[currentLang]}</p>
+          <h3 class="dish-title">${item.title[currentLang]}</h3>
+          <p class="dish-description">${item.desc[currentLang]}</p>
         </div>
+        
         <div class="dish-meta-bottom">
-          <span class="dish-allergens-tag">Allergeni: ${dish.allergens[currentLang]}</span>
-          <div class="dish-action-group" id="action-group-${dish.id}">
-            ${renderActionGroup(dish.id, qty)}
+          <div class="dish-allergens-tag">
+            <strong>Allergeni:</strong> ${item.allergens[currentLang]}
+          </div>
+
+          <div class="dish-action-group">
+            ${countInCart > 0 ? `
+              <div class="dish-qty-ctrls">
+                <button class="qty-btn" onclick="updateItemQty(${item.id}, -1)" title="Diminuisci">-</button>
+                <span class="qty-display">${countInCart}</span>
+                <button class="qty-btn" onclick="updateItemQty(${item.id}, 1)" title="Aumenta">+</button>
+              </div>
+            ` : `
+              <button class="btn-add-tray" onclick="updateItemQty(${item.id}, 1)">
+                <span>+ Aggiungi</span>
+              </button>
+            `}
           </div>
         </div>
       </div>
     `;
+
     menuGrid.appendChild(card);
   });
 }
 
-function renderActionGroup(dishId, qty) {
-  if (qty > 0) {
-    return `
-      <div class="dish-qty-ctrls">
-        <button class="qty-btn" onclick="modifyQty(${dishId}, -1)" title="Diminuisci">−</button>
-        <span class="qty-display">${qty}</span>
-        <button class="qty-btn" onclick="modifyQty(${dishId}, 1)" title="Aumenta">+</button>
-      </div>
-    `;
-  } else {
-    return `
-      <button class="btn-add-tray" onclick="modifyQty(${dishId}, 1)">
-        <span>+ Aggiungi</span>
-      </button>
-    `;
-  }
+// Lightbox Open / Close
+window.openLightbox = function(id) {
+  const item = menuData.find(m => m.id === id);
+  if (!item || !imgLightbox) return;
+  activeLightboxItemId = id;
+
+  lightboxImg.src = item.image;
+  lightboxTitle.innerText = item.title[currentLang];
+  lightboxPrice.innerText = item.priceStr;
+  lightboxDesc.innerText = item.desc[currentLang];
+  lightboxAllergens.innerHTML = `<strong>Allergeni:</strong> ${item.allergens[currentLang]}`;
+
+  const inCart = cart[id] || 0;
+  lightboxAddBtn.innerText = inCart > 0 ? `Aggiunto (${inCart}) • Aggiungi ancora` : `Aggiungi al Tavolo (${item.priceStr})`;
+
+  imgLightbox.classList.add("active");
+};
+
+function closeLightbox() {
+  if (imgLightbox) imgLightbox.classList.remove("active");
 }
 
-// Modify Cart Quantity
-function modifyQty(dishId, delta) {
-  const current = cart[dishId] || 0;
+if (lightboxClose) lightboxClose.addEventListener("click", closeLightbox);
+if (lightboxBackdrop) lightboxBackdrop.addEventListener("click", closeLightbox);
+
+if (lightboxAddBtn) {
+  lightboxAddBtn.addEventListener("click", () => {
+    if (activeLightboxItemId) {
+      updateItemQty(activeLightboxItemId, 1);
+      const inCart = cart[activeLightboxItemId] || 0;
+      lightboxAddBtn.innerText = `Aggiunto (${inCart}) • Aggiungi ancora`;
+    }
+  });
+}
+
+// Update Cart Quantity
+window.updateItemQty = function(id, delta) {
+  const current = cart[id] || 0;
   const next = current + delta;
+
   if (next <= 0) {
-    delete cart[dishId];
+    delete cart[id];
   } else {
-    cart[dishId] = next;
+    cart[id] = next;
   }
 
-  // Update card UI locally
-  const group = document.getElementById(`action-group-${dishId}`);
-  if (group) {
-    group.innerHTML = renderActionGroup(dishId, cart[dishId] || 0);
-  }
+  updateTrayUI();
+  renderMenu();
+};
 
-  updateFloatingBar();
-  renderTrayItems();
-}
-
-// =========================================================================
-// FLOATING BAR & TRAY LOGIC
-// =========================================================================
-function updateFloatingBar() {
-  const itemKeys = Object.keys(cart);
+// Update Tray Bottom Sheet
+function updateTrayUI() {
+  const itemIds = Object.keys(cart);
   let totalCount = 0;
   let totalPrice = 0;
 
-  itemKeys.forEach(id => {
+  itemIds.forEach(idStr => {
+    const id = parseInt(idStr, 10);
     const qty = cart[id];
-    const dish = menuData.find(d => d.id === parseInt(id));
-    if (dish && qty > 0) {
+    const item = menuData.find(m => m.id === id);
+    if (item) {
       totalCount += qty;
-      totalPrice += (dish.priceVal * qty);
+      totalPrice += (item.priceVal * qty);
     }
   });
-
-  orderCountBadge.textContent = totalCount;
 
   if (totalCount > 0) {
-    orderTotalPriceEl.innerHTML = `<strong>€ ${totalPrice.toFixed(2)}</strong> stimato • Tocca per visualizzare`;
-    floatingBar.classList.add('visible');
+    if (floatingOrderBar) floatingOrderBar.classList.add("visible");
+    if (trayItemCount) trayItemCount.innerText = totalCount;
+    if (trayTotalPrice) trayTotalPrice.innerText = `€ ${totalPrice.toFixed(2)}`;
+    if (modalTrayTotal) modalTrayTotal.innerText = `€ ${totalPrice.toFixed(2)}`;
+
+    // Build brief summary
+    const summaryItems = itemIds.map(idStr => {
+      const id = parseInt(idStr, 10);
+      const item = menuData.find(m => m.id === id);
+      return `${cart[id]}x ${item.title[currentLang]}`;
+    });
+    if (trayItemsSummary) {
+      trayItemsSummary.innerText = `${selectedTable} • ` + summaryItems.slice(0, 2).join(", ") + (summaryItems.length > 2 ? ` e altri ${summaryItems.length - 2}...` : "");
+    }
   } else {
-    orderTotalPriceEl.textContent = currentLang === 'it' ? "Tocca i piatti per comporre l'ordine" : "Tap items to start order";
-    floatingBar.classList.remove('visible');
-    trayModal.classList.remove('active');
+    if (floatingOrderBar) floatingOrderBar.classList.remove("visible");
+    closeTraySheet();
   }
 
-  trayTotalVal.textContent = `€ ${totalPrice.toFixed(2)}`;
+  renderTraySheetItems();
 }
 
-function renderTrayItems() {
-  const itemKeys = Object.keys(cart);
-  if (itemKeys.length === 0) {
-    trayItemsList.innerHTML = `
-      <div style="text-align: center; padding: 40px 10px; color: var(--text-muted);">
-        <p style="font-size: 1.1rem; margin-bottom: 6px;">Nessuna portata ancora selezionata.</p>
-        <span style="font-size: 0.85rem; color: var(--text-dim);">Sfoglia la carta e premi "+ Aggiungi" sui piatti per comporre il tuo ordine!</span>
+function renderTraySheetItems() {
+  if (!trayItemsContainer) return;
+  trayItemsContainer.innerHTML = "";
+  const itemIds = Object.keys(cart);
+
+  if (itemIds.length === 0) {
+    trayItemsContainer.innerHTML = `<p style="text-align: center; color: var(--text-muted); padding: 30px;">Nessuna portata ancora selezionata.</p>`;
+    return;
+  }
+
+  itemIds.forEach(idStr => {
+    const id = parseInt(idStr, 10);
+    const qty = cart[id];
+    const item = menuData.find(m => m.id === id);
+    if (!item) return;
+
+    const row = document.createElement("div");
+    row.className = "tray-item-row";
+    row.innerHTML = `
+      <div class="tray-item-info">
+        <strong>${item.title[currentLang]}</strong>
+        <span>€ ${(item.priceVal * qty).toFixed(2)} (${item.priceStr} cad.)</span>
+      </div>
+      <div class="tray-item-actions">
+        <div class="dish-qty-ctrls">
+          <button class="qty-btn" onclick="updateItemQty(${item.id}, -1)">-</button>
+          <span class="qty-display">${qty}</span>
+          <button class="qty-btn" onclick="updateItemQty(${item.id}, 1)">+</button>
+        </div>
+        <button class="tray-remove-btn" onclick="removeItemCompletely(${item.id})">Elimina</button>
       </div>
     `;
-    trayTotalVal.textContent = "€ 0.00";
-    return;
-  }
-
-  let html = '';
-  let totalPrice = 0;
-
-  itemKeys.forEach(id => {
-    const qty = cart[id];
-    const dish = menuData.find(d => d.id === parseInt(id));
-    if (dish && qty > 0) {
-      const lineTotal = dish.priceVal * qty;
-      totalPrice += lineTotal;
-      html += `
-        <div class="tray-item-row">
-          <div class="tray-item-info">
-            <strong>${dish.title[currentLang]}</strong>
-            <span>${qty}x (€ ${dish.priceVal.toFixed(2)}) = <strong>€ ${lineTotal.toFixed(2)}</strong></span>
-          </div>
-          <div class="tray-item-actions">
-            <div class="dish-qty-ctrls" style="transform: scale(0.9);">
-              <button class="qty-btn" onclick="modifyQty(${dish.id}, -1)">−</button>
-              <span class="qty-display">${qty}</span>
-              <button class="qty-btn" onclick="modifyQty(${dish.id}, 1)">+</button>
-            </div>
-            <button class="tray-remove-btn" onclick="modifyQty(${dish.id}, -${qty})">Rimuovi</button>
-          </div>
-        </div>
-      `;
-    }
-  });
-
-  trayItemsList.innerHTML = html;
-  trayTotalVal.textContent = `€ ${totalPrice.toFixed(2)}`;
-}
-
-// Open / Close Tray
-openTrayBtn.addEventListener('click', () => {
-  renderTrayItems();
-  trayCurrentTableEl.textContent = `${currentTable} • Kalò Pizza & Lounge Bar`;
-  trayModal.classList.add('active');
-});
-
-const trayTriggerSummary = document.getElementById('tray-trigger-summary');
-if (trayTriggerSummary) {
-  trayTriggerSummary.addEventListener('click', () => {
-    renderTrayItems();
-    trayCurrentTableEl.textContent = `${currentTable} • Kalò Pizza & Lounge Bar`;
-    trayModal.classList.add('active');
+    trayItemsContainer.appendChild(row);
   });
 }
 
-closeTrayBtn.addEventListener('click', () => {
-  trayModal.classList.remove('active');
-});
-
-trayBackdrop.addEventListener('click', () => {
-  trayModal.classList.remove('active');
-});
-
-// Send Tray WhatsApp Order
-sendTrayWaBtn.addEventListener('click', () => {
-  const itemKeys = Object.keys(cart);
-  if (itemKeys.length === 0) {
-    alert("Seleziona almeno un piatto prima di inviare l'ordine!");
-    return;
-  }
-
-  let itemsText = '';
-  let grandTotal = 0;
-
-  itemKeys.forEach(id => {
-    const qty = cart[id];
-    const dish = menuData.find(d => d.id === parseInt(id));
-    if (dish && qty > 0) {
-      const lineTotal = dish.priceVal * qty;
-      grandTotal += lineTotal;
-      itemsText += `• ${qty}x ${dish.title[currentLang]} (€ ${dish.priceVal.toFixed(2)}) = € ${lineTotal.toFixed(2)}\n`;
-    }
-  });
-
-  const message = 
-`Buonasera Kalò Pizza & Lounge Bar! 🍕🍸
-Vorrei inviare la seguente comanda per *${currentTable}*:
-
-${itemsText}
-💰 *Totale Stimato: € ${grandTotal.toFixed(2)}*
-
-Posizione: Via Stracina 16, Giardini Naxos (ME)
-Richiesta inviata tramite il Menù Digitale Interattivo.`;
-
-  const waUrl = `https://wa.me/${KALO_WHATSAPP}?text=${encodeURIComponent(message)}`;
-  window.open(waUrl, '_blank');
-});
-
-// =========================================================================
-// TABLE SELECTOR CHIPS
-// =========================================================================
-tableChips.forEach(chip => {
-  chip.addEventListener('click', () => {
-    tableChips.forEach(c => c.classList.remove('active'));
-    chip.classList.add('active');
-    currentTable = chip.getAttribute('data-table');
-    if (mockupTableLabel) {
-      mockupTableLabel.textContent = currentTable.toUpperCase();
-    }
-    if (trayCurrentTableEl) {
-      trayCurrentTableEl.textContent = `${currentTable} • Kalò Pizza & Lounge Bar`;
-    }
-  });
-});
-
-// =========================================================================
-// CATEGORY FILTERS & SEARCH
-// =========================================================================
-catPills.forEach(pill => {
-  pill.addEventListener('click', () => {
-    catPills.forEach(p => p.classList.remove('active'));
-    pill.classList.add('active');
-    activeCategory = pill.getAttribute('data-cat');
-    renderMenu();
-  });
-});
-
-searchInput.addEventListener('input', () => {
-  if (searchInput.value.trim().length > 0) {
-    clearSearchBtn.style.display = 'block';
-  } else {
-    clearSearchBtn.style.display = 'none';
-  }
+window.removeItemCompletely = function(id) {
+  delete cart[id];
+  updateTrayUI();
   renderMenu();
-});
-
-clearSearchBtn.addEventListener('click', () => {
-  searchInput.value = '';
-  clearSearchBtn.style.display = 'none';
-  renderMenu();
-});
-
-// =========================================================================
-// LIGHTBOX FULLSCREEN IMAGE PREVIEW
-// =========================================================================
-window.openLightbox = function(dishId) {
-  const dish = menuData.find(d => d.id === dishId);
-  if (!dish) return;
-
-  currentLightboxDishId = dishId;
-  lightboxImg.src = dish.image;
-  lightboxImg.onerror = function() {
-    this.onerror = null;
-    this.src = 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80';
-  };
-  lightboxBadge.textContent = dish.badge[currentLang];
-  lightboxTitle.textContent = dish.title[currentLang];
-  lightboxDesc.textContent = dish.desc[currentLang];
-  lightboxPrice.textContent = dish.priceStr;
-
-  const currentQty = cart[dishId] || 0;
-  lightboxAddBtn.textContent = currentQty > 0 ? `Nel Carrello (${currentQty}) +1` : `+ Aggiungi all'Ordine`;
-
-  imgLightbox.classList.add('active');
 };
 
-lightboxClose.addEventListener('click', () => {
-  imgLightbox.classList.remove('active');
-});
-
-lightboxBackdrop.addEventListener('click', () => {
-  imgLightbox.classList.remove('active');
-});
-
-lightboxAddBtn.addEventListener('click', () => {
-  if (currentLightboxDishId) {
-    modifyQty(currentLightboxDishId, 1);
-    const newQty = cart[currentLightboxDishId] || 0;
-    lightboxAddBtn.textContent = `Nel Carrello (${newQty}) +1`;
+function openTraySheet() {
+  if (trayModal) {
+    trayModal.classList.add("active");
+    if (trayTableLabel) trayTableLabel.innerText = `${selectedTable} • Trattoria ParadiSiculo`;
+    renderTraySheetItems();
   }
-});
+}
 
-// =========================================================================
-// QR MODAL SIMULATION
-// =========================================================================
-qrModalBtn.addEventListener('click', () => {
-  qrDialog.classList.add('active');
-});
+function closeTraySheet() {
+  if (trayModal) trayModal.classList.remove("active");
+}
 
-if (btnTestQrStand) {
-  btnTestQrStand.addEventListener('click', () => {
-    qrDialog.classList.add('active');
+if (openTrayBtn) openTrayBtn.addEventListener("click", openTraySheet);
+if (btnViewTray) btnViewTray.addEventListener("click", openTraySheet);
+if (closeTrayBtn) closeTrayBtn.addEventListener("click", closeTraySheet);
+if (closeTrayBackdrop) closeTrayBackdrop.addEventListener("click", closeTraySheet);
+
+// Generate & Send WhatsApp Order
+if (btnSendWa) {
+  btnSendWa.addEventListener("click", () => {
+    const itemIds = Object.keys(cart);
+    if (itemIds.length === 0) return;
+
+    let total = 0;
+    let message = `Buongiorno Trattoria ParadiSiculo! Vorrei inoltrare la seguente comanda dal Menù Digitale:\n\n`;
+    message += `📍 Postazione / Servizio: *${selectedTable}*\n`;
+    message += `------------------------------------\n`;
+
+    itemIds.forEach(idStr => {
+      const id = parseInt(idStr, 10);
+      const qty = cart[id];
+      const item = menuData.find(m => m.id === id);
+      if (item) {
+        const subtotal = item.priceVal * qty;
+        total += subtotal;
+        message += `▪️ *${qty}x* ${item.title[currentLang]} (€ ${subtotal.toFixed(2)})\n`;
+      }
+    });
+
+    message += `------------------------------------\n`;
+    message += `💰 *Totale Stimato: € ${total.toFixed(2)}*\n\n`;
+    message += `Attendiamo conferma dalla cucina di Lilla. Grazie mille!`;
+
+    const encoded = encodeURIComponent(message);
+    const waUrl = `https://wa.me/${PARADISICULO_WHATSAPP}?text=${encoded}`;
+    window.open(waUrl, "_blank");
   });
 }
 
-dialogCloseBtn.addEventListener('click', () => {
-  qrDialog.classList.remove('active');
-});
+// Direct Booking Form Handler
+const btnSubmitBooking = document.getElementById("btn-submit-booking");
+if (btnSubmitBooking) {
+  btnSubmitBooking.addEventListener("click", () => {
+    const name = document.getElementById("book-name").value.trim() || "Cliente";
+    const phone = document.getElementById("book-phone").value.trim() || "Non indicato";
+    const date = document.getElementById("book-date").value || "Prima data disponibile";
+    const service = document.getElementById("book-service").value;
+    const guests = document.getElementById("book-guests").value;
 
-qrDialog.addEventListener('click', (e) => {
-  if (e.target === qrDialog) {
-    qrDialog.classList.remove('active');
-  }
-});
+    let msg = `Buongiorno Trattoria ParadiSiculo, vorrei richiedere la prenotazione di un tavolo:\n\n`;
+    msg += `👤 *Nome:* ${name}\n`;
+    msg += `📞 *Telefono:* ${phone}\n`;
+    msg += `📅 *Data richiesta:* ${date}\n`;
+    msg += `🕒 *Turno:* ${service}\n`;
+    msg += `👥 *Ospiti:* ${guests}\n\n`;
+    msg += `Resto in attesa della vostra conferma di disponibilità. Grazie!`;
 
-// =========================================================================
-// RESERVATION FORM WHATSAPP
-// =========================================================================
-bookingForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  const name = document.getElementById('b-name').value.trim();
-  const date = document.getElementById('b-date').value;
-  const time = document.getElementById('b-time').value;
-  const guests = document.getElementById('b-guests').value;
-  const phone = document.getElementById('b-phone').value.trim();
-  const notes = document.getElementById('b-notes').value.trim();
-
-  // Check if chosen day is Wednesday (day 3)
-  if (date) {
-    const selectedDate = new Date(date);
-    if (selectedDate.getDay() === 3) {
-      const proceed = confirm(
-        "Nota: Il mercoledì la sala è chiusa al pubblico per riposo settimanale.\n" +
-        "Sono attivi i servizi di Asporto e Domicilio dalle 17:30 alle 22:00.\n\n" +
-        "Vuoi comunque inviare il messaggio di richiesta su WhatsApp?"
-      );
-      if (!proceed) return;
-    }
-  }
-
-  const msg = 
-`Buonasera Kalò Pizza & Lounge Bar!
-Desidero richiedere la prenotazione di un tavolo:
-
-👤 *Nome:* ${name}
-📅 *Data:* ${date}
-⏰ *Orario:* ${time} (Sala: Gio-Mar 19:00 - 23:00)
-👥 *Ospiti:* ${guests}
-📞 *Cellulare:* ${phone}
-${notes ? `📝 *Note particolari:* ${notes}` : ''}
-
-Attendo gentile conferma di disponibilità. Grazie!`;
-
-  const waUrl = `https://wa.me/${KALO_WHATSAPP}?text=${encodeURIComponent(msg)}`;
-  window.open(waUrl, '_blank');
-});
-
-// Auto-fill today's date into the booking date picker
-const dateInput = document.getElementById('b-date');
-if (dateInput) {
-  const today = new Date().toISOString().split('T')[0];
-  dateInput.value = today;
-  dateInput.min = today;
+    const encoded = encodeURIComponent(msg);
+    window.open(`https://wa.me/${PARADISICULO_WHATSAPP}?text=${encoded}`, "_blank");
+  });
 }
 
-// =========================================================================
-// BILINGUAL LANGUAGE SWITCH (IT / EN)
-// =========================================================================
-langItBtn.addEventListener('click', () => {
-  setLanguage('it');
+// Table Selector Chips
+document.querySelectorAll(".table-chip").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".table-chip").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    selectedTable = btn.getAttribute("data-table");
+    
+    // Update Stand Display
+    if (standCurrentTable) standCurrentTable.innerText = selectedTable.toUpperCase();
+    if (modalQrIndicator) modalQrIndicator.innerText = `Menù Digitale configurato per: ${selectedTable}`;
+
+    // Update QR Codes with table hash
+    const tableParam = encodeURIComponent(selectedTable);
+    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=260x260&data=https%3A%2F%2Fmanuuudev.github.io%2Fdemo-ristorante-sicilia%2F%23table%3D${tableParam}&color=08090D&bgcolor=FFFFFF&margin=8`;
+    if (dynamicTableQr) dynamicTableQr.src = qrUrl;
+    if (modalQrImage) modalQrImage.src = qrUrl;
+
+    updateTrayUI();
+  });
 });
 
-langEnBtn.addEventListener('click', () => {
-  setLanguage('en');
-});
+// Category Pills
+if (categoryTabs) {
+  categoryTabs.querySelectorAll(".cat-pill").forEach(tab => {
+    tab.addEventListener("click", () => {
+      categoryTabs.querySelectorAll(".cat-pill").forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+      activeCategory = tab.getAttribute("data-category");
+      renderMenu();
+    });
+  });
+}
+
+// Search Input
+if (searchInput) {
+  searchInput.addEventListener("input", (e) => {
+    searchQuery = e.target.value;
+    if (searchClearBtn) {
+      searchClearBtn.style.display = searchQuery.length > 0 ? "block" : "none";
+    }
+    renderMenu();
+  });
+}
+
+if (searchClearBtn) {
+  searchClearBtn.addEventListener("click", () => {
+    searchInput.value = "";
+    searchQuery = "";
+    searchClearBtn.style.display = "none";
+    renderMenu();
+  });
+}
+
+const btnReset = document.getElementById("btn-reset-filters");
+if (btnReset) {
+  btnReset.addEventListener("click", () => {
+    activeCategory = "all";
+    searchQuery = "";
+    if (searchInput) searchInput.value = "";
+    if (searchClearBtn) searchClearBtn.style.display = "none";
+
+    document.querySelectorAll(".cat-pill").forEach(t => t.classList.toggle("active", t.getAttribute("data-category") === "all"));
+    renderMenu();
+  });
+}
+
+// Language Switcher
+const langIt = document.getElementById("lang-it");
+const langEn = document.getElementById("lang-en");
 
 function setLanguage(lang) {
   currentLang = lang;
-  if (lang === 'it') {
-    langItBtn.classList.add('active');
-    langEnBtn.classList.remove('active');
-
-    document.getElementById('announcement-text').textContent = "🛵 Domicilio & Asporto 17:30–22:00 • 🍕 Sala 19:00–23:00 (Mercoledì Chiuso) • Giardini Naxos";
-    document.getElementById('nav-menu').textContent = "Menù Digitale";
-    document.getElementById('nav-qr').textContent = "QR al Tavolo";
-    document.getElementById('nav-lounge').textContent = "Lounge Bar";
-    document.getElementById('nav-booking').textContent = "Prenotazioni";
-    document.getElementById('btn-qr-label').textContent = "QR Tavolo";
-    document.getElementById('btn-nav-reserve').querySelector('span').textContent = "Prenota Tavolo";
-
-    document.getElementById('hero-title').innerHTML = `La Vera Pizza Napoletana <br><span class="gold-gradient">incontra l'Arte del Lounge.</span>`;
-    document.getElementById('hero-desc').textContent = "Farine biologiche selezionate, lievitazione naturale di 48 ore a temperatura controllata e pomodoro San Marzano D.O.P. per una leggerezza senza pari, accompagnati dalla mixology d'autore affacciata sulla costa di Naxos.";
-    document.getElementById('hero-btn-menu').querySelector('span').textContent = "Esplora la Carta Digitale";
-
-    document.getElementById('menu-pretitle').textContent = "ESPERIENZA SMARTPHONE & TAVOLO";
-    document.getElementById('menu-main-title').textContent = "Il Menù Digitale Kalò";
-    document.getElementById('menu-main-desc').textContent = "Fotografie ad alta definizione, allergeni dettagliati, ingredienti D.O.P. e selezione portate istantanea con invio diretto via WhatsApp.";
-    document.getElementById('menu-search').placeholder = "Cerca pizza, cocktail o ingrediente (es. 'Pistacchio', 'Bufala', 'Negroni')...";
-
-    document.getElementById('order-bar-title').textContent = "Selezione Portate al Tavolo";
-    document.getElementById('open-tray-btn').textContent = "Vedi Ordine";
-    document.getElementById('tray-title-text').textContent = "La Tua Selezione al Tavolo";
-    document.getElementById('tray-total-label').textContent = "Totale Stimato:";
-    document.getElementById('tray-btn-text').textContent = "Invia Ordine su WhatsApp al Locale";
-
-  } else {
-    langEnBtn.classList.add('active');
-    langItBtn.classList.remove('active');
-
-    document.getElementById('announcement-text').textContent = "🛵 Delivery & Takeaway 5:30–10:00 PM • 🍕 Dining 7:00–11:00 PM (Closed Wed) • Giardini Naxos";
-    document.getElementById('nav-menu').textContent = "Digital Menu";
-    document.getElementById('nav-qr').textContent = "Table QR";
-    document.getElementById('nav-lounge').textContent = "Lounge Bar";
-    document.getElementById('nav-booking').textContent = "Reservations";
-    document.getElementById('btn-qr-label').textContent = "Table QR";
-    document.getElementById('btn-nav-reserve').querySelector('span').textContent = "Book Table";
-
-    document.getElementById('hero-title').innerHTML = `Authentic Neapolitan Pizza <br><span class="gold-gradient">meets the Art of Cocktail Lounge.</span>`;
-    document.getElementById('hero-desc').textContent = "Selected organic flours, 48-hour natural proofing, and San Marzano D.O.P. tomatoes for unmatched airy digestibility, paired with signature mixology along the Naxos coast.";
-    document.getElementById('hero-btn-menu').querySelector('span').textContent = "Explore Digital Menu";
-
-    document.getElementById('menu-pretitle').textContent = "SMARTPHONE & TABLE EXPERIENCE";
-    document.getElementById('menu-main-title').textContent = "Kalò Digital Menu";
-    document.getElementById('menu-main-desc').textContent = "High-definition photography, allergen guides, D.O.P. certified ingredients, and instant WhatsApp table ordering.";
-    document.getElementById('menu-search').placeholder = "Search pizza, cocktail or ingredient (e.g. 'Pistachio', 'Burrata', 'Negroni')...";
-
-    document.getElementById('order-bar-title').textContent = "Your Table Selection";
-    document.getElementById('open-tray-btn').textContent = "View Order";
-    document.getElementById('tray-title-text').textContent = "Your Selected Dishes";
-    document.getElementById('tray-total-label').textContent = "Estimated Total:";
-    document.getElementById('tray-btn-text').textContent = "Send Order via WhatsApp to Staff";
-  }
-
+  if (langIt) langIt.classList.toggle("active", lang === "it");
+  if (langEn) langEn.classList.toggle("active", lang === "en");
   renderMenu();
-  updateFloatingBar();
+  updateTrayUI();
 }
 
-function escapeHtml(str) {
-  return str.replace(/[&<>'"]/g, 
-    tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
-  );
+if (langIt) langIt.addEventListener("click", () => setLanguage("it"));
+if (langEn) langEn.addEventListener("click", () => setLanguage("en"));
+
+// QR Code Modal Simulator Logic
+function openQrModal() {
+  if (qrModal) qrModal.classList.add("active");
+}
+function closeQrModal() {
+  if (qrModal) qrModal.classList.remove("active");
 }
 
-// Initial Render
-renderMenu();
-updateFloatingBar();
-console.log("Kalò Pizza & Lounge Bar digital engine initialized successfully.");
+if (qrModalBtn) qrModalBtn.addEventListener("click", openQrModal);
+if (btnTestQrDemo) btnTestQrDemo.addEventListener("click", openQrModal);
+if (qrModalClose) qrModalClose.addEventListener("click", closeQrModal);
+if (qrModalBackdrop) qrModalBackdrop.addEventListener("click", closeQrModal);
+if (btnModalCloseAction) btnModalCloseAction.addEventListener("click", closeQrModal);
+
+// Initial Boot
+document.addEventListener("DOMContentLoaded", () => {
+  updateLiveStatus();
+  renderMenu();
+  updateTrayUI();
+  setInterval(updateLiveStatus, 60000);
+});
